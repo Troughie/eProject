@@ -2,7 +2,7 @@
     {
         "name" : "aaaaaa",
         "id": "1",
-        "img" : "../img/news.webp",
+        "img" : "./img/news.webp",
         "brand" : "panasonic",
         "category": "fans",
         "color" :"black"
@@ -10,7 +10,7 @@
     {
         "name" : "aaaaaa",
         "id": "2",
-        "img" : "../img/news.webp",
+        "img" : "./img/news.webp",
         "brand" : "shenko",
         "category": "fans",
         "color" :"black"
@@ -18,7 +18,7 @@
     {
         "name" : "aaaaaa",
         "id": "3",
-        "img" : "../img/news.webp",
+        "img" : "./img/news.webp",
         "brand" : "mitsubishi",
         "category": "fans",
         "color" :"black"
@@ -26,7 +26,7 @@
     {
         "name" : "aaaaaa",
         "id": "4",
-        "img" : "../img/news.webp",
+        "img" : "./img/news.webp",
         "brand" : "hatari",
         "category": "fans",
         "color" :"white"
@@ -34,7 +34,7 @@
     {
         "name" : "aaaaaa",
         "id": "5",
-        "img" : "../img/news.webp",
+        "img" : "./img/news.webp",
         "brand" : "sharp",
         "category": "fans",
         "color" :"white"
@@ -42,7 +42,7 @@
     {
         "name" : "aaaaaa",
         "id": "6",
-        "img" : "../img/news.webp",
+        "img" : "./img/news.webp",
         "brand" : "panasonic",
         "category": "accessories",
         "color" :"white"
@@ -50,7 +50,7 @@
     {
         "name" : "aaaaaa",
         "id": "7",
-        "img" : "../img/news.webp",
+        "img" : "./img/news.webp",
         "brand" : "sharp",
         "category": "accessories",
         "color" :"white"
@@ -58,7 +58,7 @@
     {
         "name" : "aaaaaa",
         "id": "8",
-        "img" : "../img/news.webp",
+        "img" : "./img/news.webp",
         "brand" : "shenko",
         "category": "accessories",
         "color" :"white"
@@ -66,7 +66,7 @@
     {
         "name" : "aaaaaa",
         "id": "9",
-        "img" : "../img/news.webp",
+        "img" : "./img/news.webp",
         "brand" : "mitsubishi",
         "category": "accessories",
         "color" :"white"
@@ -74,7 +74,7 @@
     {
         "name" : "aaaaaa",
         "id": "10",
-        "img" : "../img/news.webp",
+        "img" : "./img/news.webp",
         "brand" : "hatari",
         "category": "accessories",
         "color" :"white"

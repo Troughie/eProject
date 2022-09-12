@@ -1,11 +1,5 @@
 <div id="main">
     <div class="product" id="productData">
-        <div class="product-cols">
-            <div class="link">
-                <a href="#" id="home-pro" class="home">Home </a><i class="fa-solid fa-caret-right"></i><span>
-                    Product</span>
-            </div>
-        </div>
 
         <div class="carousel-logo" style="padding-bottom:20px">
             <div class="slider">
@@ -46,209 +40,231 @@
 
         <div class="product-filter">
             <div class="filter-header">
-                <button class="btn-control" onclick="showFilter()" id="filter-open"><i
+                <button class="btn btn-control" onclick="showFilter()" id="filter-open"><i
                         class="fa-solid fa-filter"></i></button>
-                <button class="btn-control" id="cart">
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-                    <span id="cart-num"></span>
-                </button>
-            </div>
-            <div class="filter-zoom">
-                <div class="filter-nav">
-                    <div class="filter-category filter-child">
-                        <h3 class="filter-name">Category</h3>
-                        <div class="category filter">
-                            <label class="checkbox-control">
-                                <input type="checkbox" class="category" onchange="show()" value="fans">
-                                <div class="checkbox-box">
-                                    <i>&ensp;</i>
-                                </div>
-                                <span class="checkbox-text" data-filter="fan">Fans</span>
-                            </label>
-                        </div>
-                        <div class="category filter">
-                            <label class="checkbox-control">
-                                <input type="checkbox" class="category" onchange="show()" value="accessories">
-                                <div class="checkbox-box">
-                                    <i>&ensp;</i>
-                                </div>
-                                <span class="checkbox-text" data-filter="accessories">Accessories</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="filter-type filter-child">
-                        <h3 class="filter-name">Type</h3>
-                        <div class="type-fan filter">
-                            <label class="checkbox-control">
-                                <input type="checkbox" class="type" onchange="show()" value="ceiling">
-                                <div class="checkbox-box">
-                                    <i>&ensp;</i>
-                                </div>
-                                <span class="checkbox-text" data-filter="ceiling">Ceiling fans</span>
-                            </label>
-                        </div>
-                        <div class="type-fan filter">
-                            <label class="checkbox-control">
-                                <input type="checkbox" class="type" onchange="show()" value="pedestal">
-                                <div class="checkbox-box">
-                                    <i>&ensp;</i>
-                                </div>
-                                <span class="checkbox-text" data-filter="pedestal">Pedestal fans</span>
-                            </label>
-                        </div>
-                        <div class="type-fan filter">
-                            <label class="checkbox-control">
-                                <input type="checkbox" class="type" onchange="show()" value="wall">
-                                <div class="checkbox-box">
-                                    <i>&ensp;</i>
-                                </div>
-                                <span class="checkbox-text" data-filter="wall">Wall
-                                    fans</span>
-                            </label>
-                        </div>
-                        <div class="type-fan filter">
-                            <label class="checkbox-control">
-                                <input type="checkbox" class="type" onchange="show()" value="exhaust">
-                                <div class="checkbox-box">
-                                    <i>&ensp;</i>
-                                </div>
-                                <span class="checkbox-text" data-filter="exhaust">Exhaust fans</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="filter-color filter-child">
-                        <h3 class="filter-name">Color</h3>
-                        <div class="color-color filter">
-                            <label class="checkbox-control">
-                                <input type="checkbox" class="color" onchange="show()" value="yellow">
-                                <div class="checkbox-box">
-                                    <i>&ensp;</i>
-                                </div>
-                                <span class="checkbox-text" data-filter="yellow">yellow</span>
-                            </label>
-                        </div>
-                        <div class="color-color filter">
-                            <label class="checkbox-control">
-                                <input type="checkbox" class="color" onchange="show()" value="white">
-                                <div class="checkbox-box">
-                                    <i>&ensp;</i>
-                                </div>
-                                <span class="checkbox-text" data-filter="white">white</span>
-                            </label>
-                        </div>
-                        <div class="color-color filter">
-                            <label class="checkbox-control">
-                                <input type="checkbox" class="color" onchange="show()" value="black">
-                                <div class="checkbox-box">
-                                    <i>&ensp;</i>
-                                </div>
-                                <span class="checkbox-text" data-filter="black">black</span>
-                            </label>
-                        </div>
-                        <div class="color-color filter">
-                            <label class="checkbox-control">
-                                <input type="checkbox" class="color" onchange="show()" value="blue">
-                                <div class="checkbox-box">
-                                    <i>&ensp;</i>
-                                </div>
-                                <span class="checkbox-text" data-filter="blue">blue</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <div class="filter-brand filter-child" id="filter-brand">
-                        <h3 class="filter-name">Brand</h3>
-                        <div class="brand-fan filter">
-                            <label class="checkbox-control">
-                                <input type="checkbox" onchange="show()" class="brand" value="sharp" id="sharp"
-                                    data-filter="sharp">
-                                <div class="checkbox-box">
-                                    <i>&ensp;</i>
-                                </div>
-                                <span class="checkbox-text">Sharp</span>
-                            </label>
-                        </div>
-                        <div class="brand-fan filter">
-                            <label class="checkbox-control">
-                                <input type="checkbox" onchange="show()" class="brand" value="shenko" id="shenko"
-                                    data-filter="shenko">
-                                <div class="checkbox-box">
-                                    <i>&ensp;</i>
-                                </div>
-                                <span class="checkbox-text">Shenko</span>
-                            </label>
-                        </div>
-                        <div class="brand-fan filter">
-                            <label class="checkbox-control">
-                                <input type="checkbox" onchange="show()" class="brand" value="panasonic" id="panasonic"
-                                    data-filter="panasonic">
-                                <div class="checkbox-box">
-                                    <i>&ensp;</i>
-                                </div>
-                                <span class="checkbox-text">Panasonic</span>
-                            </label>
-                        </div>
-                        <div class="brand-fan filter">
-                            <label class="checkbox-control">
-                                <input type="checkbox" onchange="show()" class="brand" value="mitsubishi"
-                                    id="mistsubishi" data-filter="mitsubishi">
-                                <div class="checkbox-box">
-                                    <i>&ensp;</i>
-                                </div>
-                                <span class="checkbox-text">Mitsubishi</span>
-                            </label>
-                        </div>
-                        <div class="brand-fan filter">
-                            <label class="checkbox-control">
-                                <input type="checkbox" onchange="show()" class="brand" value="hatari" id="hatari"
-                                    data-filter="hatari">
-                                <div class="checkbox-box">
-                                    <i>&ensp;</i>
-                                </div>
-                                <span class="checkbox-text">Hatari</span>
-                            </label>
-                        </div>
+                <div>
+                    <div>
+                        <button type="button" id="open-cart" onclick="openCart()" class="btn btn-control"
+                            data-bs-toggle="modal" data-bs-target="#myModal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="btn-count"></span>
+                        </button>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="cart" id="cart">
+            <button class="btn btn-close" onclick="closeCart()" id="close-cart"></button>
+            <div class="cart-header">
+                <span>Item</span><span>Price</span><span>Quality</span>
+            </div>
+            <div id="menuCart">
 
-                <div class="filter-priceRange">
-                    <h3 class="filter-name">Price-range</h3>
-                    <div class="price-range filter">
+            </div>
+            <div class="cart__total">
+                <strong>Total</strong>
+                <span class="cart-total"></span>
+            </div>
+        </div>
+
+        <div class="filter-zoom">
+            <div class="filter-nav">
+                <div class="filter-category filter-child">
+                    <h3 class="filter-name">Category</h3>
+                    <div class="category filter">
                         <label class="checkbox-control">
-                            <input type="checkbox" class="category" onchange="show()" value="20">
+                            <input type="checkbox" class="category" onchange="show()" value="fans">
                             <div class="checkbox-box">
                                 <i>&ensp;</i>
                             </div>
-                            <span class="checkbox-text" data-filter="fan">20$</span>
+                            <span class="checkbox-text" data-filter="fan">Fans</span>
+                        </label>
+                    </div>
+                    <div class="category filter">
+                        <label class="checkbox-control">
+                            <input type="checkbox" class="category" onchange="show()" value="accessories">
+                            <div class="checkbox-box">
+                                <i>&ensp;</i>
+                            </div>
+                            <span class="checkbox-text" data-filter="accessories">Accessories</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-type filter-child">
+                    <h3 class="filter-name">Type</h3>
+                    <div class="type-fan filter">
+                        <label class="checkbox-control">
+                            <input type="checkbox" class="type" onchange="show()" value="ceiling">
+                            <div class="checkbox-box">
+                                <i>&ensp;</i>
+                            </div>
+                            <span class="checkbox-text" data-filter="ceiling">Ceiling fans</span>
+                        </label>
+                    </div>
+                    <div class="type-fan filter">
+                        <label class="checkbox-control">
+                            <input type="checkbox" class="type" onchange="show()" value="pedestal">
+                            <div class="checkbox-box">
+                                <i>&ensp;</i>
+                            </div>
+                            <span class="checkbox-text" data-filter="pedestal">Pedestal fans</span>
+                        </label>
+                    </div>
+                    <div class="type-fan filter">
+                        <label class="checkbox-control">
+                            <input type="checkbox" class="type" onchange="show()" value="wall">
+                            <div class="checkbox-box">
+                                <i>&ensp;</i>
+                            </div>
+                            <span class="checkbox-text" data-filter="wall">Wall
+                                fans</span>
+                        </label>
+                    </div>
+                    <div class="type-fan filter">
+                        <label class="checkbox-control">
+                            <input type="checkbox" class="type" onchange="show()" value="exhaust">
+                            <div class="checkbox-box">
+                                <i>&ensp;</i>
+                            </div>
+                            <span class="checkbox-text" data-filter="exhaust">Exhaust fans</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-color filter-child">
+                    <h3 class="filter-name">Color</h3>
+                    <div class="color-color filter">
+                        <label class="checkbox-control">
+                            <input type="checkbox" class="color" onchange="show()" value="yellow">
+                            <div class="checkbox-box">
+                                <i>&ensp;</i>
+                            </div>
+                            <span class="checkbox-text" data-filter="yellow">yellow</span>
+                        </label>
+                    </div>
+                    <div class="color-color filter">
+                        <label class="checkbox-control">
+                            <input type="checkbox" class="color" onchange="show()" value="white">
+                            <div class="checkbox-box">
+                                <i>&ensp;</i>
+                            </div>
+                            <span class="checkbox-text" data-filter="white">white</span>
+                        </label>
+                    </div>
+                    <div class="color-color filter">
+                        <label class="checkbox-control">
+                            <input type="checkbox" class="color" onchange="show()" value="black">
+                            <div class="checkbox-box">
+                                <i>&ensp;</i>
+                            </div>
+                            <span class="checkbox-text" data-filter="black">black</span>
+                        </label>
+                    </div>
+                    <div class="color-color filter">
+                        <label class="checkbox-control">
+                            <input type="checkbox" class="color" onchange="show()" value="blue">
+                            <div class="checkbox-box">
+                                <i>&ensp;</i>
+                            </div>
+                            <span class="checkbox-text" data-filter="blue">blue</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="filter-brand filter-child" id="filter-brand">
+                    <h3 class="filter-name">Brand</h3>
+                    <div class="brand-fan filter">
+                        <label class="checkbox-control">
+                            <input type="checkbox" onchange="show()" class="brand" value="sharp" id="sharp"
+                                data-filter="sharp">
+                            <div class="checkbox-box">
+                                <i>&ensp;</i>
+                            </div>
+                            <span class="checkbox-text">Sharp</span>
+                        </label>
+                    </div>
+                    <div class="brand-fan filter">
+                        <label class="checkbox-control">
+                            <input type="checkbox" onchange="show()" class="brand" value="shenko" id="shenko"
+                                data-filter="shenko">
+                            <div class="checkbox-box">
+                                <i>&ensp;</i>
+                            </div>
+                            <span class="checkbox-text">Shenko</span>
+                        </label>
+                    </div>
+                    <div class="brand-fan filter">
+                        <label class="checkbox-control">
+                            <input type="checkbox" onchange="show()" class="brand" value="panasonic" id="panasonic"
+                                data-filter="panasonic">
+                            <div class="checkbox-box">
+                                <i>&ensp;</i>
+                            </div>
+                            <span class="checkbox-text">Panasonic</span>
+                        </label>
+                    </div>
+                    <div class="brand-fan filter">
+                        <label class="checkbox-control">
+                            <input type="checkbox" onchange="show()" class="brand" value="mitsubishi" id="mistsubishi"
+                                data-filter="mitsubishi">
+                            <div class="checkbox-box">
+                                <i>&ensp;</i>
+                            </div>
+                            <span class="checkbox-text">Mitsubishi</span>
+                        </label>
+                    </div>
+                    <div class="brand-fan filter">
+                        <label class="checkbox-control">
+                            <input type="checkbox" onchange="show()" class="brand" value="hatari" id="hatari"
+                                data-filter="hatari">
+                            <div class="checkbox-box">
+                                <i>&ensp;</i>
+                            </div>
+                            <span class="checkbox-text">Hatari</span>
                         </label>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-
-    <div id="data-product" class="list-items">
-
-    </div>
-
-    <div class="modal fade" id="popupImage" role="dialog">
-        <div class="modal-dialog">
-
-            <div class="modal-content">
-                <div class="modal-header">
-                </div>
-                <div class="modal-body" id="modal-item">
-
-                </div>
-                <div class="modal-footer">
+            <div class="filter-priceRange">
+                <h3 class="filter-name">Price-range</h3>
+                <div class="price-range filter">
+                    <label class="checkbox-control">
+                        <input type="checkbox" class="category" onchange="show()" value="20">
+                        <div class="checkbox-box">
+                            <i>&ensp;</i>
+                        </div>
+                        <span class="checkbox-text" data-filter="fan">20$</span>
+                    </label>
                 </div>
             </div>
-
         </div>
     </div>
-    
+</div>
+
+
+<div id="data-product" class="list-items">
+
+</div>
+
+<div class="modal fade" id="popupImage" role="dialog">
+    <div class="modal-dialog modal-xl modal-dialog-scroll">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" id="modal-item">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
 </div>
 </div>

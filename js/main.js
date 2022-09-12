@@ -1,24 +1,21 @@
 // get file json and load page SPA
 let data = [];
 let a = 1;
-
-var database = [];
-$.getJSON("items.json")
-    .done(function (result) {
-        database = result;
-    })
-    .fail(function () {
-        alert("Get data that bai ");
-    });
-
+let cartNum = 0;
+let numPage = 16;
+let cart = []
 
 $(document).ready(function () {
   $("#main").load("home.html")
-  
+
+
   $("#product").click(function (e) {
     e.preventDefault();
+
     $("#main").load("product.html");
+
     $('.collapse').collapse('hide');
+
   })
 
   $("#home").click(function (e) {
@@ -27,11 +24,11 @@ $(document).ready(function () {
     $('.collapse').collapse('hide');
   })
 
-  // $("#home-logo").click(function (e) {
-  //   e.preventDefault();
-  //   $("#main").load("home.html");
-  //   $('.collapse').collapse('hide');
-  // })
+  $("#home-logo").click(function (e) {
+    e.preventDefault();
+    $("#main").load("home.html");
+    $('.collapse').collapse('hide');
+  })
 
   $("#gallery").click(function (e) {
     e.preventDefault();
@@ -56,25 +53,14 @@ $(document).ready(function () {
     $("#main").load("signin.html");
     $('.collapse').collapse('hide');
   })
-  
+
   $("#register").click(function (e) {
     e.preventDefault();
     $("#main").load("signup.html");
     $('.collapse').collapse('hide');
   })
 
-  // $("#readmore").click(function (e) {
-  //   e.preventDefault();
-  //   $("#main").load("blog.html")
-  // });
 
-  $("#product").click(function () {
-    $.getJSON("items.json", function (items) {
-      data = items;
-      showImage(data)
-      popupImage(data)
-    });
-  })
 
 
   $(document).on("click", ".popup", function () {
@@ -85,8 +71,9 @@ $(document).ready(function () {
     popupImage(product[0]);
     $("#popupImage").modal("show");
   })
-
 })
+
+let productList = document.querySelector('.list-items')
 function loadBlog() {
   $("#main").load("blog.html")
 }
@@ -94,35 +81,62 @@ function loadLogin() {
   $("#main").load("signin.html")
 }
 
+eventListener()
+
+function eventListener() {
+  window.addEventListener('DOMContentLoaded', () => {
+    loadJSON();
+    // loadCart();
+});
+}
+function loadJSON(){
+  fetch('items.json')
+  .then(response => response.json())
+  .then(data =>{
+      let html = '';
+      data.forEach(product => {
+          html += `
+          <div class="list-item ${product.brand}" data-brand="${product.brand}" >
+          <div class="list-item__img">
+            <img height="260px" class="popup" src="${product.img}" data-id="${product.id}">
+            <button id="add-cart" onclick="addCart(${product.id})"><i class="fa-solid fa-cart-plus"></i>Add to cart</button>
+            </div>
+            <div class="list-item__info">
+            <p class="item-name">${product.name}</p>
+            <p class="item-brand">${product.brand}</p>
+            <p class="item-info">${product.color}</p>
+            <p class="item-info">${product.price}</p>
+            </div>
+        </div>
+          `;
+      });
+      productList.innerHTML = html;
+  })
+  .catch(error => {
+      alert(`User live server or local server`);
+      //URL scheme must be "http" or "https" for CORS request. You need to be serving your index.html locally or have your site hosted on a live server somewhere for the Fetch API to work properly.
+  })
+}
 
 
 // Product items 
 
 function showImage(data) {
+  let length = data.length;
   let s = []
 
   $.each(data, function (i, item) {
     s.push(`
               <div class="list-item ${item.brand}" data-brand="${item.brand}" >
                   <div class="list-item__img">
-                    <img class="popup" src="${item.img}" data-id="${item.id}">
-                    <p>${item.name}</p><br>
+                    <img height="260px" class="popup" src="${item.img}" data-id="${item.id}">
+                    <button id="add-cart" onclick="addCart(${item.id})"><i class="fa-solid fa-cart-plus"></i>Add to cart</button>
                     </div>
                     <div class="list-item__info">
-                    <p>${item.brand}</p>
-                    <p>${item.color}</p>
-                    <p>${item.category}</p>
-                    </div>
-                    
-                    <div class="list-item__icon">
-                    <div class="list-item__star">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    </div>
-                    <button id="add-cart" onclick="addCart()"><i class="fa-solid fa-circle-plus"></i></button>
+                    <p class="item-name">${item.name}</p>
+                    <p class="item-brand">${item.brand}</p>
+                    <p class="item-info">${item.color}</p>
+                    <p class="item-info">${item.price}</p>
                     </div>
                 </div>
   `)
@@ -136,23 +150,22 @@ function popupImage(item) {
 
   let s = `
               <div class="popup-item">
-              <img src="${item.img}">
-                    <div class="popup-item__info">
-                    <p>${item.name}</p><br>
-                    <p>${item.price}</p>
-                    <p>${item.description}</p>
+                    <img width="480px" height="480px" src="${item.img}">
+                      <div class="popup-item__info">
+                      <div>
+                        <p>Name:<span>${item.name}</span></p>
+                        <p>Color:<span>${item.color}</span></p>
+                        <p>Origin:<span>${item.Origin}</span></p>
+                        <p>Wing:<span>${item.Wing}</span></p>
+                        <p>Length:<span>${item.Length}</span></p>
+                        <p>Warranty:<span>${item.Warranty}</span></p>
+                      </div>
+                      <div>
+                      <span>Your comment</span>
+                      <textarea rows="4" cols="30" name="comment"></textarea>
                     </div>
+                      </div>
                     
-                    <div class="popup-item__icon">
-                    <div class="popup-item__star">
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    <i class="fa-regular fa-star"></i>
-                    </div>
-                    <i class="fa-solid fa-circle-plus"></i>
-                    </div>
                 </div>
   `;
   $("#modal-item").html(s)
@@ -183,8 +196,6 @@ function show() {
 
   }
 
-
-
   showImage(newData);
 }
 
@@ -200,11 +211,113 @@ function showFilter() {
 }
 
 
-let cart = 0
-function addCart() {
-  cart++
-  alert('add cart successful')
-  $("#cart-num").text(cart)
+function openCart() {
+  document.querySelector("#cart").classList.add("show-cart")
+
+  if (localStorage.getItem("cart") != null) {
+    cart = JSON.parse(localStorage.getItem("cart"));
+    var s = [];
+    $.each(cart, function (i, item) {
+      s.push(`
+        <div class="cart-body">
+          <span>${item.name}</span>
+          <span class="cart-price">${item.price}</span>
+          <div>
+          <input class="cart-qty" style="width: 50px" type="number" value="${item.qty}">
+          <button style="width:50px; padding:0; margin-bottom:5px" class="btn btn-danger cart-remove">X</button>
+          </div>
+          </div>
+       `)
+    });
+    $("#menuCart").html(s.join(" "))
+  }
+
+  var removeItemCartBtn = document.getElementsByClassName('cart-remove')
+
+
+  for (var index = 0; index < removeItemCartBtn.length; index++) {
+    var button = removeItemCartBtn[index];
+    button.addEventListener('click', removeCartItem)
+  }
+
+  updateCartTotal();
+}
+
+
+function removeCartItem(event) {
+  var btnClicked = event.target
+  btnClicked.parentElement.parentElement.remove()
+  
+
+  let products = JSON.parse(localStorage.getItem('cart'))
+
+  let updateProducts = products.filter(product => {
+    return product.id == parseInt(btnClicked.dataset.id)
+  })
+  localStorage.setItem('cart', JSON.stringify(updateProducts))
+  updateCartTotal();
+}
+
+function updateCartTotal() {
+  var cartItemContainer = document.getElementById('menuCart')
+  var cartItems = cartItemContainer.getElementsByClassName("cart-body")
+
+  var total = 0
+  for (let index = 0; index < cartItems.length; index++) {
+    const cartItem = cartItems[index];
+    var priceElement = cartItem.getElementsByClassName("cart-price")[0]
+    var qtyElement = cartItem.getElementsByClassName('cart-qty')[0]
+
+    var price = priceElement.innerText.replace('$', '')
+    var qty = qtyElement.value
+
+    total = total + price * qty
+  }
+  document.getElementsByClassName('cart-total')[0].innerText = '$' + total
+  document.getElementsByClassName('btn-count')[0].innerText = cartNum
+}
+
+function closeCart() {
+  document.querySelector("#cart").classList.remove("show-cart")
+}
+
+
+// function removeItemCart() {
+
+
+// }
+
+function addCart(id) {
+
+  var item = data[id];
+  var newEle = {
+    "id": id,
+    "name": item.name,
+    "price": item.price,
+    "qty": 1
+  }
+
+  if (localStorage.getItem("cart") == null) {
+    cart = [];
+  }
+  else {
+    cart = JSON.parse(localStorage.getItem("cart"));
+  }
+
+  var find = false;
+  cart.forEach(element => {
+    if (element.id == id) {
+      element.qty++;
+
+      find = true;
+    }
+  });
+
+  if (!find) {
+    cart.push(newEle);
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("add cart succeeded !");
 }
 
 
@@ -240,7 +353,7 @@ function signIn(e) {
   e.preventDefault()
   $("#name").val()
   $("#password").val()
-  var user = localStorage.getItem(username)
+  var user = JSON.parse.localStorage.getItem(username)
   var data = JSON.parse(user)
   console.log(user);
 }

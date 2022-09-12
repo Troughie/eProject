@@ -3,7 +3,7 @@ let data = [];
 let a = 1;
 let cartNum = 0;
 let numPage = 16;
-let cart = []
+const cartItemID = 1;
 
 $(document).ready(function () {
   $("#main").load("home.html")
@@ -15,7 +15,12 @@ $(document).ready(function () {
     $("#main").load("product.html");
 
     $('.collapse').collapse('hide');
-
+    $.getJSON("items.json", function (items) {
+      data = items;
+      showImage(data)
+      popupImage(data)
+    });
+    openCart();
   })
 
   $("#home").click(function (e) {
@@ -71,9 +76,9 @@ $(document).ready(function () {
     popupImage(product[0]);
     $("#popupImage").modal("show");
   })
-})
 
-let productList = document.querySelector('.list-items')
+
+})
 function loadBlog() {
   $("#main").load("blog.html")
 }
@@ -81,42 +86,6 @@ function loadLogin() {
   $("#main").load("signin.html")
 }
 
-eventListener()
-
-function eventListener() {
-  window.addEventListener('DOMContentLoaded', () => {
-    loadJSON();
-    // loadCart();
-});
-}
-function loadJSON(){
-  fetch('items.json')
-  .then(response => response.json())
-  .then(data =>{
-      let html = '';
-      data.forEach(product => {
-          html += `
-          <div class="list-item ${product.brand}" data-brand="${product.brand}" >
-          <div class="list-item__img">
-            <img height="260px" class="popup" src="${product.img}" data-id="${product.id}">
-            <button id="add-cart" onclick="addCart(${product.id})"><i class="fa-solid fa-cart-plus"></i>Add to cart</button>
-            </div>
-            <div class="list-item__info">
-            <p class="item-name">${product.name}</p>
-            <p class="item-brand">${product.brand}</p>
-            <p class="item-info">${product.color}</p>
-            <p class="item-info">${product.price}</p>
-            </div>
-        </div>
-          `;
-      });
-      productList.innerHTML = html;
-  })
-  .catch(error => {
-      alert(`User live server or local server`);
-      //URL scheme must be "http" or "https" for CORS request. You need to be serving your index.html locally or have your site hosted on a live server somewhere for the Fetch API to work properly.
-  })
-}
 
 
 // Product items 
@@ -213,8 +182,7 @@ function showFilter() {
 
 function openCart() {
   document.querySelector("#cart").classList.add("show-cart")
-
-  if (localStorage.getItem("cart") != null) {
+  if (localStorage.getItem("cart") !== null) {
     cart = JSON.parse(localStorage.getItem("cart"));
     var s = [];
     $.each(cart, function (i, item) {
@@ -231,23 +199,83 @@ function openCart() {
     });
     $("#menuCart").html(s.join(" "))
   }
-
   var removeItemCartBtn = document.getElementsByClassName('cart-remove')
 
 
-  for (var index = 0; index < removeItemCartBtn.length; index++) {
+  for (var index = 0; index <= removeItemCartBtn.length; index++) {
     var button = removeItemCartBtn[index];
     button.addEventListener('click', removeCartItem)
   }
-
   updateCartTotal();
 }
+
+function closeCart() {
+  document.querySelector("#cart").classList.remove("show-cart")
+}
+
+function addCart(id) {
+
+  var item = data[id];
+  var newEle = {
+    "id": id +1,
+    "name": item.name,
+    "price": item.price,
+    "qty": 1
+  }
+
+  if (localStorage.getItem("cart") == null) {
+    cart = [];
+  }
+  else {
+    cart = JSON.parse(localStorage.getItem("cart"));
+    // cart = JSON.parse(localStorage.getItem("cart"));
+    var s = [];
+    $.each(cart, function (i, item) {
+      s.push(`
+            <div class="cart-body" data-id="${item.id}">
+              <span>${item.name}</span>
+              <span class="cart-price">${item.price}</span>
+              <div>
+              <input class="cart-qty" style="width: 50px" type="number" value="${item.qty}">
+              <button onclick="removeItem(${item.id})" style="width:50px; padding:0; margin-bottom:5px" class="btn btn-danger cart-remove">X</button>
+              </div>
+              </div>
+           `)
+    });
+    $("#menuCart").html(s.join(" "))
+
+  }
+
+  var find = false;
+  cart.forEach(element => {
+    if (element.id == id) {
+      element.qty++;
+
+      find = true;
+    }
+  });
+
+  if (!find) {
+    cart.push(newEle);
+  }
+  localStorage.setItem("cart", JSON.stringify(cart));
+  alert("add cart succeeded !");
+  updateCartTotal();
+  var removeItemCartBtn = document.getElementsByClassName('cart-remove')
+
+
+  for (var index = 0; index <= removeItemCartBtn.length; index++) {
+    var button = removeItemCartBtn[index];
+    button.addEventListener('click', removeCartItem)
+  }
+}
+
 
 
 function removeCartItem(event) {
   var btnClicked = event.target
   btnClicked.parentElement.parentElement.remove()
-  
+
 
   let products = JSON.parse(localStorage.getItem('cart'))
 
@@ -273,52 +301,11 @@ function updateCartTotal() {
 
     total = total + price * qty
   }
+
   document.getElementsByClassName('cart-total')[0].innerText = '$' + total
-  document.getElementsByClassName('btn-count')[0].innerText = cartNum
+  document.getElementsByClassName('btn-count')[0].innerText = cartItems.length
 }
 
-function closeCart() {
-  document.querySelector("#cart").classList.remove("show-cart")
-}
-
-
-// function removeItemCart() {
-
-
-// }
-
-function addCart(id) {
-
-  var item = data[id];
-  var newEle = {
-    "id": id,
-    "name": item.name,
-    "price": item.price,
-    "qty": 1
-  }
-
-  if (localStorage.getItem("cart") == null) {
-    cart = [];
-  }
-  else {
-    cart = JSON.parse(localStorage.getItem("cart"));
-  }
-
-  var find = false;
-  cart.forEach(element => {
-    if (element.id == id) {
-      element.qty++;
-
-      find = true;
-    }
-  });
-
-  if (!find) {
-    cart.push(newEle);
-  }
-  localStorage.setItem("cart", JSON.stringify(cart));
-  alert("add cart succeeded !");
-}
 
 
 
@@ -329,13 +316,15 @@ function signUp() {
   var username = $("#username").val()
   var pass = $("#password").val()
 
+
+
   var user = {
     email: mail,
     username: username,
     password: pass
   }
   var json = JSON.stringify(user)
-  localStorage.setItem(username, json)
+  localStorage.setItem('username', json)
   let info = [];
   info.push(`
     successful your account
@@ -349,11 +338,12 @@ function signUp() {
   $("#main").load("signin.html")
 }
 
+
+
 function signIn(e) {
-  e.preventDefault()
   $("#name").val()
   $("#password").val()
-  var user = JSON.parse.localStorage.getItem(username)
+  var user = JSON.parse.localStorage.getItem('username')
   var data = JSON.parse(user)
   console.log(user);
 }

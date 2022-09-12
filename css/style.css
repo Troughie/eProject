@@ -647,8 +647,16 @@ start blog
     }
 
     .list-items {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 30px;
+    }
+
+    .item-brand {
+        margin: auto 30px;
+    }
+
+    .list-item img {
+        width: auto;
     }
 
     .navbar-brand {
@@ -747,7 +755,6 @@ start blog
     }
 
     .card {
-        width: auto;
         height: auto;
     }
 

@@ -1,3 +1,7 @@
+@import url(../css/faq.css);
+@import url(../css/contactus.css);
+@import url(../css/gallery.css);
+
 /*  base */
 img {
     display: block;
@@ -314,10 +318,12 @@ body {
 .filter-header {
     border-bottom: 1px solid #000;
 }
+.popup-item {
+    display: flex;
+}
 
 .popup-item__info {
     margin-top: 20px;
-    display: flex;
     justify-content: space-between;
 }
 
@@ -505,87 +511,6 @@ start blog
     width: auto;
 }
 
-
-/* ==========
-    Gallery
-   ==========
-*/
-.body-gallery {
-    font-family: sans-serif;
-    margin: 0;
-    background: #f2f2f2;
-}
-
-.gallery-tittle {
-    text-align: center;
-    margin-top: 10px;
-    color: #fff;
-    margin-bottom: -10px;
-    padding-top: 300px;
-}
-
-.gallery-text {
-    text-align: center;
-    margin-bottom: 60px;
-    color: #fff;
-}
-
-
-
-.gallery-masonry {
-    /* gallery-Masonry container */
-    -webkit-column-count: 4;
-    -moz-column-count: 4;
-    column-count: 4;
-    -webkit-column-gap: 1em;
-    -moz-column-gap: 1em;
-    column-gap: 1em;
-    margin: 1.5em;
-    padding: 0;
-    -moz-column-gap: 1.5em;
-    -webkit-column-gap: 1.5em;
-    column-gap: 1.5em;
-    font-size: .85em;
-    background-color: black;
-    background-size: 100px;
-}
-
-.gallery-item {
-    display: inline-block;
-    background: #fff;
-    padding: 1em;
-    margin: 0 0 1.5em;
-    width: 100%;
-    -webkit-transition: 1s ease all;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-shadow: 2px 2px 4px 0 #ccc;
-}
-
-.gallery-img {
-    max-width: 100%;
-}
-
-.gallery-header {
-    /* height: 400px; */
-    text-align: center;
-    width: auto;
-    background-image: url(../img/header-gallery.jpeg);
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.gallery-stt {
-    color: black;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: medium;
-    font-style: italic;
-    padding-inline: 10px;
-    text-align: center;
-    margin-bottom: -10px;
-}
-
 /* responsive */
 @media (max-width:767px) {
     .main {
@@ -657,6 +582,10 @@ start blog
 
     .list-item img {
         width: auto;
+    }
+
+    #add-cart {
+        margin: auto 10px;
     }
 
     .navbar-brand {

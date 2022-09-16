@@ -1,7 +1,7 @@
 .info {
     display: flex;
     justify-content: space-between;
-    background-color: #252734;
+    background-color: #434245;
     padding: 0 130px;
     padding-top: 20px;
     padding-bottom: 17px;
@@ -79,6 +79,7 @@ footer {
 
 .footer-banner p {
     width: 700px;
+    margin: 0;
 }
 
 .footer__info {
@@ -103,6 +104,10 @@ footer {
     margin: auto 0;
 }
 
+.footer-icon {
+    color: #D8373F;
+}
+
 .footer-input button{
     color: #fff;
     padding: 20px;
@@ -111,11 +116,18 @@ footer {
     border-radius: 10px;
 }
 
+.footer__info span ,.footer__info a {
+    font-weight: 300;
+}
+
 .footer-input input[type="email"] {
     padding: 20px;
     border-radius: 10px;
 }
 
+.fa-brands {
+    font-size: 40px;
+}
 
 ul {
     list-style: none;

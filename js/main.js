@@ -3,7 +3,7 @@ let data = [];
 let a = 1;
 let cartNum = 0;
 let numPage = 16;
-const cartItemID = 1;
+let cartItemID = 1;
 
 $(document).ready(function () {
   $("#main").load("home.html")
@@ -65,8 +65,17 @@ $(document).ready(function () {
     $('.collapse').collapse('hide');
   })
 
+  $("#faq").click(function (e) {
+    e.preventDefault();
+    $("#main").load("faq.html");
+    $('.collapse').collapse('hide');
+  })
 
-
+  $("#contact").click(function (e) {
+    e.preventDefault();
+    $("#main").load("contactus.html");
+    $('.collapse').collapse('hide');
+  })
 
   $(document).on("click", ".popup", function () {
     let id = $(this).data("id");
@@ -121,18 +130,18 @@ function popupImage(item) {
               <div class="popup-item">
                     <img width="480px" height="480px" src="${item.img}">
                       <div class="popup-item__info">
-                      <div>
-                        <p>Name:<span>${item.name}</span></p>
-                        <p>Color:<span>${item.color}</span></p>
-                        <p>Origin:<span>${item.Origin}</span></p>
-                        <p>Wing:<span>${item.Wing}</span></p>
-                        <p>Length:<span>${item.Length}</span></p>
-                        <p>Warranty:<span>${item.Warranty}</span></p>
-                      </div>
-                      <div>
-                      <span>Your comment</span>
-                      <textarea rows="4" cols="30" name="comment"></textarea>
-                    </div>
+                        <div>
+                          <p>Name:<span>${item.name}</span></p>
+                          <p>Color:<span>${item.color}</span></p>
+                          <p>Origin:<span>${item.Origin}</span></p>
+                          <p>Wing:<span>${item.Wing}</span></p>
+                          <p>Length:<span>${item.Length}</span></p>
+                          <p>Warranty:<span>${item.Warranty}</span></p>
+                        </div>
+                        <div>
+                          <span>Your comment</span>
+                          <textarea rows="4" cols="30" name="comment"></textarea>
+                        </div>
                       </div>
                     
                 </div>
@@ -182,23 +191,23 @@ function showFilter() {
 
 function openCart() {
   document.querySelector("#cart").classList.add("show-cart")
-  if (localStorage.getItem("cart") !== null) {
-    cart = JSON.parse(localStorage.getItem("cart"));
-    var s = [];
-    $.each(cart, function (i, item) {
-      s.push(`
-        <div class="cart-body">
-          <span>${item.name}</span>
-          <span class="cart-price">${item.price}</span>
-          <div>
-          <input class="cart-qty" style="width: 50px" type="number" value="${item.qty}">
-          <button style="width:50px; padding:0; margin-bottom:5px" class="btn btn-danger cart-remove">X</button>
-          </div>
-          </div>
-       `)
-    });
-    $("#menuCart").html(s.join(" "))
-  }
+  // if (localStorage.getItem("cart") !== null) {
+  //   cart = JSON.parse(localStorage.getItem("cart"));
+  //   var s = [];
+  //   $.each(cart, function (i, item) {
+  //     s.push(`
+  //       <div class="cart-body">
+  //         <span>${item.name}</span>
+  //         <span class="cart-price">${item.price}</span>
+  //         <div>
+  //         <input class="cart-qty" style="width: 50px" type="number" value="${item.qty}">
+  //         <button style="width:50px; padding:0; margin-bottom:5px" class="btn btn-danger cart-remove">X</button>
+  //         </div>
+  //         </div>
+  //      `)
+  //   });
+  //   $("#menuCart").html(s.join(" "))
+  // }
   var removeItemCartBtn = document.getElementsByClassName('cart-remove')
 
 
@@ -213,11 +222,12 @@ function closeCart() {
   document.querySelector("#cart").classList.remove("show-cart")
 }
 
+
 function addCart(id) {
 
-  var item = data[id];
+  var item = data[id]
   var newEle = {
-    "id": id +1,
+    "id": cartItemID,
     "name": item.name,
     "price": item.price,
     "qty": 1
@@ -228,7 +238,6 @@ function addCart(id) {
   }
   else {
     cart = JSON.parse(localStorage.getItem("cart"));
-    // cart = JSON.parse(localStorage.getItem("cart"));
     var s = [];
     $.each(cart, function (i, item) {
       s.push(`
@@ -237,15 +246,14 @@ function addCart(id) {
               <span class="cart-price">${item.price}</span>
               <div>
               <input class="cart-qty" style="width: 50px" type="number" value="${item.qty}">
-              <button onclick="removeItem(${item.id})" style="width:50px; padding:0; margin-bottom:5px" class="btn btn-danger cart-remove">X</button>
+              <button style="width:50px; padding:0; margin-bottom:5px" class="btn btn-danger cart-remove">X</button>
               </div>
               </div>
            `)
     });
     $("#menuCart").html(s.join(" "))
-
   }
-
+  cartItemID++
   var find = false;
   cart.forEach(element => {
     if (element.id == id) {
@@ -272,16 +280,15 @@ function addCart(id) {
 
 
 
-function removeCartItem(event) {
+function removeCartItem(event, id) {
   var btnClicked = event.target
   btnClicked.parentElement.parentElement.remove()
 
 
-  let products = JSON.parse(localStorage.getItem('cart'))
+  let cart = JSON.parse(localStorage.getItem('cart'))
 
-  let updateProducts = products.filter(product => {
-    return product.id == parseInt(btnClicked.dataset.id)
-  })
+  let updateProducts = cart.filter(item => item.cartItemID !== id)
+  console.log(updateProducts);
   localStorage.setItem('cart', JSON.stringify(updateProducts))
   updateCartTotal();
 }

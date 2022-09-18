@@ -38,9 +38,9 @@ body {
 /* main home */
 
 .wrapper {
-  background-image: url(../img/header.jpeg);
+  background-image: url(../img/glen-carrie-r_AtlmIuHhk-unsplash.jpg);
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: center;
   min-height: 100vh;
   background-repeat: no-repeat;
   clip-path: polygon(0 0, 100% 0, 100% 59%, 0 79%);
@@ -72,6 +72,18 @@ body {
   box-shadow: transparent;
 }
 
+.sale {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  gap: 10px;
+}
+
+.sale-img {
+  height: auto;
+  width: 500px;
+}
+
 .banner p {
   font-weight: 200;
   position: absolute;
@@ -88,6 +100,7 @@ body {
   margin: auto;
   padding: 30px;
   align-items: center;
+  transform: translateY(-80px);
 }
 .box-slogan {
   display: flex;
@@ -503,7 +516,11 @@ start blog
 }
 
 /* responsive */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  .banner {
+    transform: translateY(-650px);
+  }
+  
   .main {
     margin: 0;
     padding: 0;
@@ -681,6 +698,7 @@ start blog
 
   .card-about {
     display: block;
+    margin: auto;
   }
 
   .card {
@@ -724,6 +742,10 @@ start blog
   .footer-input {
     margin-left: 30px;
   }
+
+  .banner {
+    transform: translateY(-600px);
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1000px) {
@@ -735,8 +757,10 @@ start blog
   .popup-item {
     display: block;
     gap: 50px;
-    overflow: hidden;
-    scroll-behavior: smooth;
+  }
+
+  .banner {
+    transform: translateY(-800px);
   }
 }
 

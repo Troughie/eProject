@@ -2,7 +2,7 @@
 let data = [];
 let a = 1;
 let cartNum = 0;
-let numPage = 16;
+let numPage = 16; 
 
 $(document).ready(function () {
   $("#main").load("home.html")
@@ -19,7 +19,6 @@ $(document).ready(function () {
       showImage(data)
       popupImage(data)
     });
-    openCart();
   })
 
   $("#home").click(function (e) {
@@ -84,15 +83,17 @@ $(document).ready(function () {
     $("#popupImage").modal("show");
   })
 
-
 })
+
 function loadBlog() {
   $("#main").load("blog.html")
 }
-// function loadLogin() {
-//   $("#main").load("signin.html")
-// }
+function loadLogin() {
+  $("#main").load("signin.html")
+}
 
+
+	
 
 
 // Product items 
@@ -136,10 +137,6 @@ function popupImage(item) {
                           <p>Length:<span>${item.Length}</span></p>
                           <p>Warranty:<span>${item.Warranty}</span></p>
                         </div>
-                        <div>
-                          <span>Your comment</span>
-                          <textarea rows="4" cols="30" name="comment"></textarea>
-                        </div>
                       </div>
                     
                 </div>
@@ -157,8 +154,8 @@ function show() {
 
   if (brands.length == 0) {
     newData = data;
-
   }
+
   else {
     newData = data.filter(item => brands.search(item.brand) >= 0);
   }
@@ -170,11 +167,26 @@ function show() {
 
   if (colors.length > 0) {
     newData = data.filter(item => colors.search(item.color) >= 0);
-
   }
 
   if(type.length > 0) {
     newData = data.filter(item => type.search(item.type) >= 0);
+  }
+
+  if(type.length > 0 & colors.length > 0) {
+    newData = data.filter(item => type.search(item.type) >= 0);
+    newData = newData.filter(item => colors.search(item.color) >= 0)
+  }
+  
+  if (type.length > 0 & colors.length > 0 & brands.length >0) {
+    newData = data.filter(item => type.search(item.type) >= 0);
+    newData = newData.filter(item => colors.search(item.color) >= 0)
+    newData = newData.filter(item => brands.search(item.brand) >= 0);
+  }
+
+  if(type.length > 0 & brands.length >0) {
+    newData = data.filter(item => type.search(item.type) >= 0);
+    newData = newData.filter(item => brands.search(item.brand) >= 0);
   }
 
   showImage(newData);
@@ -254,13 +266,14 @@ function addCart(id) {
   localStorage.setItem("cart", JSON.stringify(cart));
   alert("add cart succeeded !");
   updateCartTotal();
+  
+  
   var removeItemCartBtn = document.getElementsByClassName('cart-remove')
-
-
   for (var index = 0; index <= removeItemCartBtn.length; index++) {
     var button = removeItemCartBtn[index];
     button.addEventListener('click', removeCartItem)
   }
+
 }
 
 
@@ -272,7 +285,7 @@ function removeCartItem(event, id) {
 
   let cart = JSON.parse(localStorage.getItem('cart'))
 
-  let updateProducts = cart.filter(item => item.id == data[id])
+  let updateProducts = cart.filter(item => item.id == id)
   console.log(updateProducts);
   localStorage.setItem('cart', JSON.stringify(updateProducts))
   updateCartTotal();
@@ -297,10 +310,6 @@ function updateCartTotal() {
   document.getElementsByClassName('cart-total')[0].innerText = '$' + total
   document.getElementsByClassName('btn-count')[0].innerText = cartItems.length
 }
-
-
-
-
 
 
 function signUp() {
@@ -333,8 +342,6 @@ function signUp() {
 
 
 function signIn(e) {
-  $("#name").val()
-  $("#password").val()
   var user = JSON.parse.localStorage.getItem('username')
   var data = JSON.parse(user)
   console.log(user);

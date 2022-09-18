@@ -31,13 +31,35 @@
     transform: translateX(10px);
 }
 
+.navbar {
+    background-color: #53284F;
+}
+
 .navbar-brand {
     transform: translateX(60px);
+}
+
+.collapse {
+    color: #fff;
+}
+
+.fa-bars {
+    font-size: 30px;
+    margin: auto;
+}
+
+.navbar-toggler {
+    color: #fff;
+    border: 1px solid #fff;
 }
 
 .nav-item {
     font-size: 20px;
     font-weight: bold;
+}
+
+.nav-link {
+    color: #fff;
 }
 
 .nav-item:hover {

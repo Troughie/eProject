@@ -9,10 +9,15 @@
 }
 
 .card-about {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
 }
 
+.card-sum {
+  display: flex;
+  flex-direction: column;
+}
 
 .card__stt0 {
   margin-top: -0.5px;

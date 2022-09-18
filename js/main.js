@@ -3,7 +3,6 @@ let data = [];
 let a = 1;
 let cartNum = 0;
 let numPage = 16;
-let cartItemID = 1;
 
 $(document).ready(function () {
   $("#main").load("home.html")
@@ -56,13 +55,11 @@ $(document).ready(function () {
   $("#login").click(function (e) {
     e.preventDefault();
     $("#main").load("signin.html");
-    $('.collapse').collapse('hide');
   })
 
   $("#register").click(function (e) {
     e.preventDefault();
     $("#main").load("signup.html");
-    $('.collapse').collapse('hide');
   })
 
   $("#faq").click(function (e) {
@@ -76,6 +73,7 @@ $(document).ready(function () {
     $("#main").load("contactus.html");
     $('.collapse').collapse('hide');
   })
+
 
   $(document).on("click", ".popup", function () {
     let id = $(this).data("id");
@@ -91,9 +89,9 @@ $(document).ready(function () {
 function loadBlog() {
   $("#main").load("blog.html")
 }
-function loadLogin() {
-  $("#main").load("signin.html")
-}
+// function loadLogin() {
+//   $("#main").load("signin.html")
+// }
 
 
 
@@ -154,6 +152,7 @@ function show() {
   let brands = $(".brand:checked").map(function () { return $(this).val() }).toArray().toString();
   let categories = $(".category:checked").map(function () { return $(this).val() }).toArray().toString();
   let colors = $(".color:checked").map(function () { return $(this).val() }).toArray().toString();
+  let type = $(".type:checked").map(function () { return $(this).val() }).toArray().toString();
   let newData = null;
 
   if (brands.length == 0) {
@@ -174,6 +173,10 @@ function show() {
 
   }
 
+  if(type.length > 0) {
+    newData = data.filter(item => type.search(item.type) >= 0);
+  }
+
   showImage(newData);
 }
 
@@ -191,23 +194,6 @@ function showFilter() {
 
 function openCart() {
   document.querySelector("#cart").classList.add("show-cart")
-  // if (localStorage.getItem("cart") !== null) {
-  //   cart = JSON.parse(localStorage.getItem("cart"));
-  //   var s = [];
-  //   $.each(cart, function (i, item) {
-  //     s.push(`
-  //       <div class="cart-body">
-  //         <span>${item.name}</span>
-  //         <span class="cart-price">${item.price}</span>
-  //         <div>
-  //         <input class="cart-qty" style="width: 50px" type="number" value="${item.qty}">
-  //         <button style="width:50px; padding:0; margin-bottom:5px" class="btn btn-danger cart-remove">X</button>
-  //         </div>
-  //         </div>
-  //      `)
-  //   });
-  //   $("#menuCart").html(s.join(" "))
-  // }
   var removeItemCartBtn = document.getElementsByClassName('cart-remove')
 
 
@@ -227,7 +213,7 @@ function addCart(id) {
 
   var item = data[id]
   var newEle = {
-    "id": cartItemID,
+    "id": id,
     "name": item.name,
     "price": item.price,
     "qty": 1
@@ -237,23 +223,22 @@ function addCart(id) {
     cart = [];
   }
   else {
-    cart = JSON.parse(localStorage.getItem("cart"));
-    var s = [];
-    $.each(cart, function (i, item) {
-      s.push(`
-            <div class="cart-body" data-id="${item.id}">
-              <span>${item.name}</span>
-              <span class="cart-price">${item.price}</span>
-              <div>
-              <input class="cart-qty" style="width: 50px" type="number" value="${item.qty}">
-              <button style="width:50px; padding:0; margin-bottom:5px" class="btn btn-danger cart-remove">X</button>
-              </div>
-              </div>
-           `)
-    });
-    $("#menuCart").html(s.join(" "))
+      cart = JSON.parse(localStorage.getItem("cart"));
+      var s = [];
+      $.each(cart, function (i, item) {
+        s.push(`
+          <div class="cart-body">
+            <span>${item.name}</span>
+            <span class="cart-price">${item.price}</span>
+            <div>
+            <input class="cart-qty" style="width: 50px" type="number" value="${item.qty}">
+            <button style="width:50px; padding:0; margin-bottom:5px" class="btn btn-danger cart-remove">X</button>
+            </div>
+            </div>
+         `)
+      $("#menuCart").html(s.join(" "))
+    })
   }
-  cartItemID++
   var find = false;
   cart.forEach(element => {
     if (element.id == id) {
@@ -287,7 +272,7 @@ function removeCartItem(event, id) {
 
   let cart = JSON.parse(localStorage.getItem('cart'))
 
-  let updateProducts = cart.filter(item => item.cartItemID !== id)
+  let updateProducts = cart.filter(item => item.id == data[id])
   console.log(updateProducts);
   localStorage.setItem('cart', JSON.stringify(updateProducts))
   updateCartTotal();
@@ -296,7 +281,7 @@ function removeCartItem(event, id) {
 function updateCartTotal() {
   var cartItemContainer = document.getElementById('menuCart')
   var cartItems = cartItemContainer.getElementsByClassName("cart-body")
-
+  cartItems.length += 1
   var total = 0
   for (let index = 0; index < cartItems.length; index++) {
     const cartItem = cartItems[index];

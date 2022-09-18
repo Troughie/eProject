@@ -1,173 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fanimation</title>
     <!-- Css -->
-    <link rel="stylesheet" href="./css/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/about.css">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
-        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Mulish:ital,wght@1,500&family=Poppins:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Mulish:ital,wght@1,500&family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="./js/jsBootstrap/bootstrap.min.js"></script>
     <!-- <script src="./js/angular.min.js"></script>
     <script src="./js/angular-route.min.js"></script> -->
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="container-fluid info">
-        <div class="info__me">
-            <a class="info-link" href="mailto:nguyentienngoc7166@gmail.com"><i class="fa fa-envelope-o"
-                    aria-hidden="true">faniNTN@gmail.com</i></a>
-            <span><i class="fa fa-phone" aria-hidden="true">00011020912</i></span>
-        </div>
-        <div class="info__client">
-            <a class="info-link" href="#" id="login">Login</a>
-            <a class="info-link" href="#" id="register">Register</a>
-        </div>
+      <div class="info__me">
+        <a class="info-link" href="mailto:nguyentienngoc7166@gmail.com"
+          ><i class="fa fa-envelope-o" aria-hidden="true"
+            >faniNTN@gmail.com</i
+          ></a
+        >
+        <span><i class="fa fa-phone" aria-hidden="true">00011020912</i></span>
+      </div>
+      <div class="info__client">
+        <a class="info-link" href="#" id="login">Login</a>
+        <a class="info-link" href="#" id="register">Register</a>
+      </div>
     </div>
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark sticky-top">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#" id="home-logo"><img src="./img/logo.png" alt="logo" width="50px"
-                    height="50px" class="rounded-pill"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" id="home-logo"
+          ><img
+            src="./img/logo.png"
+            alt="logo"
+            width="50px"
+            height="50px"
+            class="rounded-pill"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="product">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="gallery">Gallery</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                >Center</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#" id="about">About us</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#" id="contact">Contact us</a>
+                </li>
+                <li><a class="dropdown-item" href="#" id="faq">FAQ</a></li>
+                <li><a class="dropdown-item" href="#" id="blog">Blog</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control ms-2" type="text" placeholder="Search" />
+            <button class="btn btn-primary" type="button">
+              <i class="fa-solid fa-magnifying-glass"></i>
             </button>
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" id="home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" id="product">Product</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" id="gallery">Gallery</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Center</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" id="about">About us</a></li>
-                            <li><a class="dropdown-item" href="#" id="contact">Contact us</a></li>
-                            <li><a class="dropdown-item" href="#" id="faq">FAQ</a></li>
-                            <li><a class="dropdown-item" href="#" id="blog">Blog</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="d-flex">
-                    <input class="form-control ms-2" type="text" placeholder="Search">
-                    <button class="btn btn-primary" type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                </form>
-            </div>
+          </form>
         </div>
+      </div>
     </nav>
-    <div class="main" id="main">
-
-    </div>
+    <div class="main" id="main"></div>
     <div class="time-btnTop">
-        <button onclick="toTop()" id="toTop"><i class="fa-solid fa-arrow-up"></i></button>
-        <div id="real-time"></div>
+      <button onclick="toTop()" id="toTop">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+      <div id="real-time"></div>
     </div>
     <footer>
-        <div class="footer-banner">
+      <div class="footer-banner">
+        <div>
+          <h3>Fanimation Catalog</h3>
+        </div>
+        <div>
+          <p>
+            Fanimation’s focus is producing creative and functional fans that
+            provide ultimate personal comfort using the latest technology for
+            energy efficiency and seamless control.
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer__info">
+          <div class="footer-info">
             <div>
-                <h3>Fanimation Catalog</h3>
+              <i class="footer-icon fa-solid fa-envelope"></i>
+              <span
+                ><a href="mailto:nguyentienngoc7166@gmail.com"
+                  >: faniNTN@gmail.com</a
+                ></span
+              >
             </div>
             <div>
-                <p>Fanimation’s focus is producing creative and functional fans that provide ultimate personal comfort
-                    using the latest technology for energy efficiency and seamless control.</p>
+              <i class="footer-icon fa-solid fa-phone"></i>
+              <span>: 00000010101010</span>
             </div>
-        </div>
-        <div class="footer">
-            <div class="footer__info">
-                <div class="footer-info">
-                    <div>
-                        <i class="footer-icon fa-solid fa-envelope"></i>
-                        <span><a href="mailto:nguyentienngoc7166@gmail.com">: faniNTN@gmail.com</a></span>
-                    </div>
-                    <div>
-                        <i class="footer-icon fa-solid fa-phone"></i>
-                        <span>: 00000010101010</span>
-                    </div>
-                    <div>
-                        <i class="footer-icon fa-solid fa-location-dot"></i>
-                        <span>590 Cach Mang Thang Tam Street, Ward 11, District 3, Ho Chi Minh City.VietNam</span>
-                    </div>
-                    <div class="logo">
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                </div>
-                <div class="footer-nav">
-                    <a href="#">Home</a>
-                    <a href="#">Gallery</a>
-                    <a href="#">AboutUs</a>
-                    <a href="#">Blog</a>
-                    <a href="#">ContactUs</a>
-                </div>
-                <div class="footer-input">
-                    <input type="email" placeholder="Your email">
-                    <button>SUBSCRIBE</button>
-                </div>
+            <div>
+              <i class="footer-icon fa-solid fa-location-dot"></i>
+              <span
+                >590 Cach Mang Thang Tam Street, Ward 11, District 3, Ho Chi
+                Minh City.VietNam</span
+              >
             </div>
-
+            <div class="logo">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="footer-nav">
+            <a href="#">Home</a>
+            <a href="#">Gallery</a>
+            <a href="#">AboutUs</a>
+            <a href="#">Blog</a>
+            <a href="#">ContactUs</a>
+          </div>
+          <div class="footer-input">
+            <div>
+              <input type="email" placeholder="Your email" />
+              <button>SUBSCRIBE</button>
+            </div>
+            <div class="jPerson">
+                <span></span>
+            </div>
+          </div>
         </div>
-        <div class="footer__copyright">
-            <p> Copyright &copy; 2022 Fanimation</p>
+      </div>
+      <div class="footer__copyright">
+        <p>Copyright &copy; 2022 Fanimation</p>
 
-            <p style="color: rgb(190, 188, 188);">Designed and developed by <a href="" target="_blank">Group 2
-                </a></p>
-        </div>
+        <p style="color: rgb(190, 188, 188)">
+          Designed and developed by <a href="" target="_blank">Group 2 </a>
+        </p>
+      </div>
     </footer>
-
 
     <script src="./js/jquery-3.6.1.min.js"></script>
     <script src="./js/main.js"></script>
 
     <script>
-        let myButton = document.getElementById("toTop");
+      // scroll to top
+      let myButton = document.getElementById("toTop");
 
-        window.onscroll = function () { scrollFunction() };
+      window.onscroll = function () {
+        scrollFunction();
+      };
 
-        function scrollFunction() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                myButton.style.display = "block";
-            } else {
-                myButton.style.display = "none";
-            }
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 100 ||
+          document.documentElement.scrollTop > 100
+        ) {
+          myButton.style.display = "block";
+        } else {
+          myButton.style.display = "none";
         }
+      }
 
-        function toTop() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
+      function toTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      }
 
+      // display  time date
 
-        // Creates interval
-        const interval = setInterval(() => {
-            // Get current time
-            const now = new Date();
+      // Creates interval
+      const interval = setInterval(() => {
+        // Get current time
+        const now = new Date();
 
-            const dateTime = ((now.getMonth() + 1)) + '/' + (now.getUTCDate()) + '/' + now.getFullYear() + ' ' + (now.getHours()) + ':' + (now.getMinutes()) + ':' + (now.getSeconds());
+        const dateTime =
+          now.getMonth() +
+          1 +
+          "/" +
+          now.getUTCDate() +
+          "/" +
+          now.getFullYear() +
+          " " +
+          now.getHours() +
+          ":" +
+          now.getMinutes() +
+          ":" +
+          now.getSeconds();
 
-            document.getElementById('real-time').innerHTML = dateTime;
-        }, 1000);
-
+        document.getElementById("real-time").innerHTML = dateTime;
+      }, 1000);
+      
     </script>
-</body>
-
+  </body>
 </html>

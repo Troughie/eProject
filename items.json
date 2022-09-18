@@ -1,6 +1,7 @@
 [
     {
         "name": "Ceiling fans PC1",
+        "type" : "ceiling",
         "id" : "1",
         "brand" : "panasonic",
         "color" : "white",
@@ -14,6 +15,7 @@
     },
     {
         "name": "Ceiling fans PC2",
+        "type" : "ceiling",
         "id" : "2",
         "brand" : "panasonic",
         "color" : "blue",
@@ -27,6 +29,7 @@
     },
     {
         "name": "Ceiling fans PC3",
+        "type" : "ceiling",
         "id" : "3",
         "brand" : "panasonic",
         "color" : "black",
@@ -40,9 +43,10 @@
     },
     {
         "name": "Ceiling fans PC4",
+        "type" : "ceiling",
         "id" : "4",
         "brand" : "panasonic",
-        "color" : "slight",
+        "color" : "yellow",
         "price" : "303$",
         "img" : "./img/Panasonic/Ceiling/Cei4.jpeg",
         "category": "fans",
@@ -53,9 +57,10 @@
     },
     {
         "name": "Ceiling fans PC5",
+        "type" : "ceiling",
         "id" : "5",
         "brand" : "panasonic",
-        "color" : "Gray",
+        "color" : "black",
         "price" : "304$",
         "img" : "./img/Panasonic/Ceiling/Cei4.jpeg",
         "category": "fans",
@@ -66,6 +71,7 @@
     },
     {
         "name": "Pedestal fans PP1",
+        "type" : "pedestal",
         "id" : "6",
         "brand" : "panasonic",
         "color" : "white",
@@ -79,6 +85,7 @@
     },
     {
         "name": "Pedestal fans PP2",
+        "type" : "pedestal",
         "id" : "7",
         "brand" : "panasonic",
         "color" : "blue",
@@ -92,9 +99,10 @@
     },
     {
         "name": "Pedestal fans PP3",
+        "type" : "pedestal",
         "id" : "8",
         "brand" : "panasonic",
-        "color" : "Gray",
+        "color" : "black",
         "price" : "22$",
         "img" : "./img/Panasonic/Pedestal/1.jpeg",
         "category": "fans",
@@ -105,6 +113,7 @@
     },
     {
         "name": "Pedestal fans PP4",
+        "type" : "pedestal",
         "id" : "9",
         "brand" : "panasonic",
         "color" : "blue",
@@ -119,9 +128,10 @@
 
     {
         "name": "Pedestal fans PP5",
+        "type" : "pedestal",
         "id" : "10",
         "brand" : "panasonic",
-        "color" : "Green",
+        "color" : "blue",
         "price" : "24$",
         "img" : "./img/Panasonic/Pedestal/Pe5.jpeg",
         "category": "fans",
@@ -132,6 +142,7 @@
     },    
     {
         "name": "Wall fans PW1",
+        "type" : "wall",
         "id" : "11",
         "brand" : "panasonic",
         "color" : "yellow",
@@ -146,6 +157,7 @@
 
     {
         "name": "Wall fans PW2",
+        "type" : "wall",
         "id" : "12",
         "brand" : "panasonic",
         "color" : "blue",
@@ -159,6 +171,7 @@
     },    
     {
         "name": "Wall fans PW3",
+        "type" : "wall",
         "id" : "13",
         "brand" : "panasonic",
         "color" : "black",
@@ -172,9 +185,10 @@
     },
     {
         "name": "Wall fans PW4",
+        "type" : "wall",
         "id" : "14",
         "brand" : "panasonic",
-        "color" : "Gray",
+        "color" : "black",
         "price" : "33$",
         "img" : "./img/Panasonic/Wall/W4.webp",
         "category": "fans",
@@ -185,9 +199,10 @@
     },
     {
         "name": "Wall fans PW5",
+        "type" : "wall",
         "id" : "15",
         "brand" : "panasonic",
-        "color" : "Violet",
+        "color" : "yellow",
         "price" : "34$",
         "img" : "./img/Panasonic/Wall/W5.webp",
         "category": "fans",
@@ -198,6 +213,7 @@
     },
     {
         "name": "Exhaust fans PE1",
+        "type" : "exhaust",
         "id" : "16",
         "brand" : "panasonic",
         "color" : "white",
@@ -211,6 +227,7 @@
     },
     {
         "name": "Exhaust fans PE2",
+        "type" : "exhaust",
         "id" : "17",
         "brand" : "panasonic",
         "color" : "white",
@@ -224,6 +241,7 @@
     },
     {
         "name": "Exhaust fans PE3",
+        "type" : "exhaust",
         "id" : "18",
         "brand" : "panasonic",
         "color" : "white",
@@ -237,9 +255,10 @@
     },
     {
         "name": "Exhaust fans PE4",
+        "type" : "exhaust",
         "id" : "19",
         "brand" : "panasonic",
-        "color" : "slight",
+        "color" : "yellow",
         "price" : "43$",
         "img" : "./img/Panasonic/Exhaust/E4.jpeg",
         "category": "fans",
@@ -250,6 +269,7 @@
     },
     {
         "name": "Exhaust fans PE5",
+        "type" : "exhaust",
         "id" : "20",
         "brand" : "panasonic",
         "color" : "white",
@@ -262,10 +282,11 @@
         "Warranty": "12 Months genuine at home"
     },
     {
-        "name": "Accesories PA1",
+        "name": "accessories PA1",
+        "type" : "accessories",
         "id" : "21",
         "brand" : "panasonic",
-        "color" : "Gray",
+        "color" : "black",
         "price" : "50$",
         "img" : "./img/Panasonic/Accessories/A1.png",
         "category": "accessories",
@@ -275,10 +296,11 @@
         "Warranty": "12 Months genuine at home"
     },
     {
-        "name": "Accesories PA2",
+        "name": "accessories PA2",
+        "type" : "accessories",
         "id" : "22",
         "brand" : "panasonic",
-        "color" : "Gray",
+        "color" : "black",
         "price" : "51$",
         "img" : "./img/Panasonic/Accessories/A2.png",
         "category": "accessories",
@@ -288,10 +310,11 @@
         "Warranty": "12 Months genuine at home"
     },
     {
-        "name": "Accesories PA3",
+        "name": "accessories PA3",
+        "type" : "accessories",
         "id" : "23",
         "brand" : "panasonic",
-        "color" : "Gray",
+        "color" : "black",
         "price" : "52$",
         "img" : "./img/Panasonic/Accessories/A3.png",
         "category": "accessories",
@@ -301,10 +324,11 @@
         "Warranty": "12 Months genuine at home"
     },
     {
-        "name": "Accesories PA4",
+        "name": "accessories PA4",
+        "type" : "accessories",
         "id" : "24",
         "brand" : "panasonic",
-        "color" : "Gray",
+        "color" : "black",
         "price" : "53$",
         "img" : "./img/Panasonic/Accessories/A4.png",
         "category": "accessories",
@@ -314,10 +338,11 @@
         "Warranty": "12 Months genuine at home"
     },
     {
-        "name": "Accesories PA5",
+        "name": "Accessories PA5",
+        "type" : "accessories",
         "id" : "25",
         "brand" : "panasonic",
-        "color" : "Gray",
+        "color" : "black",
         "price" : "54$",
         "img" : "./img/Panasonic/Accessories/A5.png",
         "category": "accessories",
@@ -330,6 +355,7 @@
     
     {
         "name": "Ceiling fans MC1",
+        "type" : "ceiling",
         "id" : "26",
         "brand" : "misubishi",
         "color" : "yellow",
@@ -343,6 +369,7 @@
     },
     {
         "name": "Ceiling fans MC2",
+        "type" : "ceiling",
         "id" : "27",
         "brand" : "misubishi",
         "color" : "white",
@@ -356,6 +383,7 @@
     },
     {
         "name": "Ceiling fans MC3",
+        "type" : "ceiling",
         "id" : "28",
         "brand" : "misubishi",
         "color" : "white",
@@ -369,6 +397,7 @@
     },
     {
         "name": "Ceiling fans MC4",
+        "type" : "ceiling",
         "id" : "29",
         "brand" : "misubishi",
         "color" : "white",
@@ -382,6 +411,7 @@
     },
     {
         "name": "Ceiling fans MC5",
+        "type" : "ceiling",
         "id" : "30",
         "brand" : "misubishi",
         "color" : "blue",
@@ -396,9 +426,10 @@
 
     {
         "name": "Pedestal fans MP1",
+        "type" : "pedestal",
         "id" : "31",
         "brand" : "misubishi",
-        "color" : "red",
+        "color" : "blue",
         "price" : "62$",
         "img" : "./img/Misubishi/Pedestal/Pe1.jpeg",
         "category": "fans",
@@ -408,7 +439,8 @@
         "Warranty": "12 Months genuine at home"
     },
     {
-        "name": "Medestal fans MP2",
+        "name": "Pedestal fans MP2",
+        "type" : "pedestal",
         "id" : "32",
         "brand" : "misubishi",
         "color" : "black",
@@ -422,9 +454,10 @@
     },
     {
         "name": "Pedestal fans MP3",
+        "type" : "pedestal",
         "id" : "33",
         "brand" : "misubishi",
-        "color" : "red",
+        "color" : "blue",
         "price" : "60$",
         "img" : "./img/Misubishi/Pedestal/Pe3.jpeg",
         "category": "fans",
@@ -435,9 +468,10 @@
     },
     {
         "name": "Pedestal fans MP4",
+        "type" : "pedestal",
         "id" : "34",
         "brand" : "misubishi",
-        "color" : "slight red",
+        "color" : "yellow",
         "price" : "61$",
         "img" : "./img/Misubishi/Pedestal/Pe4.jpeg",
         "category": "fans",
@@ -448,6 +482,7 @@
     },
     {
         "name": "Pedestal fans MP5",
+        "type" : "pedestal",
         "id" : "35",
         "brand" : "misubishi",
         "color" : "blue",
@@ -461,9 +496,10 @@
     },
     {
         "name": "Wall fans MW1",
+        "type" : "wall",
         "id" : "36",
         "brand" : "misubishi",
-        "color" : "Violet",
+        "color" : "yellow",
         "price" : "70$",
         "img" : "./img/Misubishi/Wall/W1.webp",
         "category": "fans",
@@ -474,6 +510,7 @@
     },
     {
         "name": "Wall fans MW2",
+        "type" : "wall",
         "id" : "37",
         "brand" : "misubishi",
         "color" : "blue",
@@ -487,9 +524,10 @@
     },
     {
         "name": "Wall fans MW3",
+        "type" : "wall",
         "id" : "38",
         "brand" : "misubishi",
-        "color" : "Gray",
+        "color" : "black",
         "price" : "72$",
         "img" : "./img/Misubishi/Wall/W3.webp",
         "category": "fans",
@@ -500,9 +538,10 @@
     },
     {
         "name": "Wall fans MW4",
+        "type" : "wall",
         "id" : "39",
         "brand" : "misubishi",
-        "color" : "Gray",
+        "color" : "black",
         "price" : "73$",
         "img" : "./img/Misubishi/Wall/W4.webp",
         "category": "fans",
@@ -513,9 +552,10 @@
     },
     {
         "name": "Wall fans MW5",
+        "type" : "wall",
         "id" : "40",
         "brand" : "misubishi",
-        "color" : "slight violet",
+        "color" : "yellow",
         "price" : "74$",
         "img" : "./img/Misubishi/Wall/W4.webp",
         "category": "fans",
@@ -526,6 +566,7 @@
     },
     {
         "name": "Exhaust fans ME1",
+        "type" : "exhaust",
         "id" : "41",
         "brand" : "misubishi",
         "color" : "white",
@@ -539,6 +580,7 @@
     },
     {
         "name": "Exhaust fans ME2",
+        "type" : "exhaust",
         "id" : "42",
         "brand" : "misubishi",
         "color" : "black",
@@ -552,6 +594,7 @@
     },
     {
         "name": "Exhaust fans ME3",
+        "type" : "exhaust",
         "id" : "43",
         "brand" : "misubishi",
         "color" : "black",
@@ -565,9 +608,10 @@
     },
     {
         "name": "Exhaust fans ME4",
+        "type" : "exhaust",
         "id" : "44",
         "brand" : "misubishi",
-        "color" : "slight",
+        "color" : "yellow",
         "price" : "82$",
         "img" : "./img/Misubishi/Exhaust/E4.jpeg",
         "category": "fans",
@@ -578,9 +622,10 @@
     },
     {
         "name": "Exhaust fans ME5",
+        "type" : "exhaust",
         "id" : "45",
         "brand" : "misubishi",
-        "color" : "slight",
+        "color" : "yellow",
         "price" : "83$",
         "img" : "./img/Misubishi/Exhaust/E5.jpeg",
         "category": "fans",
@@ -591,6 +636,7 @@
     },
     {
         "name": "Accessories MA1",
+        "type" : "accessories",
         "id" : "46",
         "brand" : "misubishi",
         "color" : "white",
@@ -604,6 +650,7 @@
     },
     {
         "name": "Accessories MA2",
+        "type" : "accessories",
         "id" : "47",
         "brand" : "misubishi",
         "color" : "black",
@@ -617,6 +664,7 @@
     },
     {
         "name": "Accessories MA3",
+        "type" : "accessories",
         "id" : "48",
         "brand" : "misubishi",
         "color" : "white",
@@ -630,9 +678,10 @@
     },
     {
         "name": "Accessories MA4",
+        "type" : "accessories",
         "id" : "49",
         "brand" : "misubishi",
-        "color" : "green",
+        "color" : "blue",
         "price" : "93$",
         "img" : "./img/Misubishi/Accessories/A4.jpeg",
         "category": "accessories",
@@ -642,9 +691,10 @@
         "Warranty": "12 Months genuine at home"
     },    {
         "name": "Accessories MA5",
+        "type" : "accessories",
         "id" : "50",
         "brand" : "misubishi",
-        "color" : "gray",
+        "color" : "black",
         "price" : "91$",
         "img" : "./img/Misubishi/Accessories/A5.jpeg",
         "category": "accessories",
@@ -657,6 +707,7 @@
 
     {
         "name": "Ceiling fans HC1",
+        "type" : "ceiling",
         "id" : "51",
         "brand" : "hatari",
         "color" : "white",
@@ -670,6 +721,7 @@
     },
     {
         "name": "Ceiling fans HC2",
+        "type" : "ceiling",
         "id" : "52",
         "brand" : "hatari",
         "color" : "white",
@@ -683,6 +735,7 @@
     },
     {
         "name": "Ceiling fans HC3",
+        "type" : "ceiling",
         "id" : "53",
         "brand" : "hatari",
         "color" : "black",
@@ -696,6 +749,7 @@
     },
     {
         "name": "Ceiling fans HC4",
+        "type" : "ceiling",
         "id" : "54",
         "brand" : "hatari",
         "color" : "black",
@@ -709,9 +763,10 @@
     },
     {
         "name": "Ceiling fans HC5",
+        "type" : "ceiling",
         "id" : "55",
         "brand" : "hatari",
-        "color" : "sliver",
+        "color" : "white",
         "price" : "104$",
         "img" : "./img/Hatari/Ceiling/Cei5.jpeg",
         "category": "fans",
@@ -722,6 +777,7 @@
     },
     {
         "name": "Pedestal fans HP1",
+        "type" : "pedestal",
         "id" : "56",
         "brand" : "hatari",
         "color" : "black",
@@ -735,6 +791,7 @@
     },
     {
         "name": "Pedestal fans HP2",
+        "type" : "pedestal",
         "id" : "57",
         "brand" : "hatari",
         "color" : "black",
@@ -749,6 +806,7 @@
 
     {
         "name": "Pedestal fans HP3",
+        "type" : "pedestal",
         "id" : "58",
         "brand" : "hatari",
         "color" : "white",
@@ -762,6 +820,7 @@
     },
     {
         "name": "Pedestal fans HP3",
+        "type" : "pedestal",
         "id" : "59",
         "brand" : "hatari",
         "color" : "white",
@@ -775,9 +834,10 @@
     },
     {
         "name": "Pedestal fans HP4",
+        "type" : "pedestal",
         "id" : "60",
         "brand" : "hatari",
-        "color" : "sliver",
+        "color" : "white",
         "price" : "112$",
         "img" : "./img/Hatari/Pedestal/Pe4.jpeg",
         "category": "fans",
@@ -788,6 +848,7 @@
     },
     {
         "name": "Pedestal fans HP5",
+        "type" : "pedestal",
         "id" : "61",
         "brand" : "hatari",
         "color" : "white",
@@ -801,6 +862,7 @@
     },
     {
         "name": "Wall fans HW1",
+        "type" : "wall",
         "id" : "62",
         "brand" : "hatari",
         "color" : "white",
@@ -814,6 +876,7 @@
     },
     {
         "name": "Wall fans HW2",
+        "type" : "wall",
         "id" : "63",
         "brand" : "hatari",
         "color" : "yellow",
@@ -827,6 +890,7 @@
     },
     {
         "name": "Wall fans HW3",
+        "type" : "wall",
         "id" : "64",
         "brand" : "hatari",
         "color" : "white",
@@ -840,6 +904,7 @@
     },
     {
         "name": "Wall fans HW4",
+        "type" : "wall",
         "id" : "65",
         "brand" : "hatari",
         "color" : "white",
@@ -853,9 +918,10 @@
     },
     {
         "name": "Wall fans HW5",
+        "type" : "wall",
         "id" : "66",
         "brand" : "hatari",
-        "color" : "slight",
+        "color" : "yellow",
         "price" : "124$",
         "img" : "./img/Hatari/Wall/W5.jpeg",
         "category": "fans",
@@ -866,6 +932,7 @@
     },
     {
         "name": "Exhaust fans HE1",
+        "type" : "exhaust",
         "id" : "67",
         "brand" : "hatari",
         "color" : "white",
@@ -879,6 +946,7 @@
     },
     {
         "name": "Exhaust fans HE2",
+        "type" : "exhaust",
         "id" : "68",
         "brand" : "hatari",
         "color" : "white",
@@ -892,6 +960,7 @@
     },
     {
         "name": "Exhaust fans HE3",
+        "type" : "exhaust",
         "id" : "69",
         "brand" : "hatari",
         "color" : "black",
@@ -905,6 +974,7 @@
     },
     {
         "name": "Exhaust fans HE4",
+        "type" : "exhaust",
         "id" : "70",
         "brand" : "hatari",
         "color" : "black",
@@ -918,9 +988,10 @@
     },
     {
         "name": "Exhaust fans HE5",
+        "type" : "exhaust",
         "id" : "71",
         "brand" : "hatari",
-        "color" : "slight",
+        "color" : "yellow",
         "price" : "134$",
         "img" : "./img/Hatari/Exhaust/E5.jpeg",
         "category": "fans",
@@ -931,6 +1002,7 @@
     },
     {
         "name": "Accessories HA1",
+        "type" : "accessories",
         "id" : "72",
         "brand" : "hatari",
         "color" : "white",
@@ -944,9 +1016,10 @@
     },
     {
         "name": "Accessories HA2",
+        "type" : "accessories",
         "id" : "73",
         "brand" : "hatari",
-        "color" : "slight",
+        "color" : "yellow",
         "price" : "141$",
         "img" : "./img/Hatari/Accessories/A2.png",
         "category": "accessories",
@@ -957,6 +1030,7 @@
     },
     {
         "name": "Accessories HA3",
+        "type" : "accessories",
         "id" : "74",
         "brand" : "hatari",
         "color" : "white",
@@ -970,6 +1044,7 @@
     },
     {
         "name": "Accessories HA4",
+        "type" : "accessories",
         "id" : "75",
         "brand" : "hatari",
         "color" : "white",
@@ -983,6 +1058,7 @@
     },
     {
         "name": "Accessories HA5",
+        "type" : "accessories",
         "id" : "76",
         "brand" : "hatari",
         "color" : "white",
@@ -997,6 +1073,7 @@
 
     {
         "name": "Ceiling fans SC1",
+        "type" : "ceiling",
         "id" : "77",
         "brand" : "Senko",
         "color" : "white",
@@ -1010,6 +1087,7 @@
     },
     {
         "name": "Ceiling fans SC2",
+        "type" : "ceiling",
         "id" : "78",
         "brand" : "Senko",
         "color" : "white",
@@ -1023,6 +1101,7 @@
     },
     {
         "name": "Ceiling fans SC3",
+        "type" : "ceiling",
         "id" : "79",
         "brand" : "Senko",
         "color" : "blue",
@@ -1036,6 +1115,7 @@
     },
     {
         "name": "Ceiling fans SC4",
+        "type" : "ceiling",
         "id" : "80",
         "brand" : "Senko",
         "color" : "yellow",
@@ -1049,9 +1129,10 @@
     },
     {
         "name": "Ceiling fans SC5",
+        "type" : "ceiling",
         "id" : "81",
         "brand" : "Senko",
-        "color" : "silver",
+        "color" : "yellow",
         "price" : "150$",
         "img" : "./img/Senko/Ceiling/Cei5.jpeg",
         "category": "fans",
@@ -1063,6 +1144,7 @@
 
     {
         "name": "Pedestal fans SP1",
+        "type" : "pedestal",
         "id" : "82",
         "brand" : "Senko",
         "color" : "blue",
@@ -1076,6 +1158,7 @@
     },
     {
         "name": "Pedestal fans SP2",
+        "type" : "pedestal",
         "id" : "83",
         "brand" : "Senko",
         "color" : "white",
@@ -1089,9 +1172,10 @@
     },
     {
         "name": "Pedestal fans SP3",
+        "type" : "pedestal",
         "id" : "84",
         "brand" : "Senko",
-        "color" : "slight blue",
+        "color" : "yellow",
         "price" : "153$",
         "img" : "./img/Senko/Pedestal/Pe3.webp",
         "category": "fans",
@@ -1102,9 +1186,10 @@
     },
     {
         "name": "Pedestal fans SP4",
+        "type" : "pedestal",
         "id" : "85",
         "brand" : "Senko",
-        "color" : "slight red",
+        "color" : "yellow",
         "price" : "151$",
         "img" : "./img/Senko/Pedestal/Pe4.webp",
         "category": "fans",
@@ -1115,9 +1200,10 @@
     },
     {
         "name": "Pedestal fans SP5",
+        "type" : "pedestal",
         "id" : "86",
         "brand" : "Senko",
-        "color" : "red",
+        "color" : "blue",
         "price" : "151$",
         "img" : "./img/Senko/Pedestal/Pe5.webp",
         "category": "fans",
@@ -1129,9 +1215,10 @@
 
     {
         "name": "Wall fans SW1",
+        "type" : "wall",
         "id" : "87",
         "brand" : "Senko",
-        "color" : "red",
+        "color" : "blue",
         "price" : "160$",
         "img" : "./img/Senko/Wall/W5.webp",
         "category": "fans",
@@ -1142,6 +1229,7 @@
     },
     {
         "name": "Wall fans SW2",
+        "type" : "wall",
         "id" : "88",
         "brand" : "Senko",
         "color" : "blue",
@@ -1155,9 +1243,10 @@
     },
     {
         "name": "Wall fans SW3",
+        "type" : "wall",
         "id" : "89",
         "brand" : "Senko",
-        "color" : "light blue",
+        "color" : " blue",
         "price" : "162$",
         "img" : "./img/Senko/Wall/W3.webp",
         "category": "fans",
@@ -1168,9 +1257,10 @@
     },
     {
         "name": "Wall fans SW4",
+        "type" : "wall",
         "id" : "90",
         "brand" : "Senko",
-        "color" : "violet",
+        "color" : "yellow",
         "price" : "163$",
         "img" : "./img/Senko/Wall/W4.webp",
         "category": "fans",
@@ -1181,9 +1271,10 @@
     },
     {
         "name": "Wall fans SW5",
+        "type" : "wall",
         "id" : "91",
         "brand" : "Senko",
-        "color" : "green",
+        "color" : "blue",
         "price" : "164$",
         "img" : "./img/Senko/Wall/W5.webp",
         "category": "fans",
@@ -1194,6 +1285,7 @@
     },
     {
         "name": "Exhaust fans SE1",
+        "type" : "exhaust",
         "id" : "92",
         "brand" : "Senko",
         "color" : "black",
@@ -1207,6 +1299,7 @@
     },
     {
         "name": "Exhaust fans SE2",
+        "type" : "exhaust",
         "id" : "93",
         "brand" : "Senko",
         "color" : "black",
@@ -1220,9 +1313,10 @@
     },
     {
         "name": "Exhaust fans SE3",
+        "type" : "exhaust",
         "id" : "94",
         "brand" : "Senko",
-        "color" : "light black",
+        "color" : " black",
         "price" : "166$",
         "img" : "./img/Senko/Exhaust/E3.webp",
         "category": "fans",
@@ -1233,6 +1327,7 @@
     },
     {
         "name": "Exhaust fans SE4",
+        "type" : "exhaust",
         "id" : "95",
         "brand" : "Senko",
         "color" : "black",
@@ -1246,9 +1341,10 @@
     },
     {
         "name": "Exhaust fans SE5",
+        "type" : "exhaust",
         "id" : "96",
         "brand" : "Senko",
-        "color" : "silver",
+        "color" : "yellow",
         "price" : "166$",
         "img" : "./img/Senko/Exhaust/E5.webp",
         "category": "fans",
@@ -1261,6 +1357,7 @@
 
     {
         "name": "Accessories SA1",
+        "type" : "accessories",
         "id" : "97",
         "brand" : "Senko",
         "color" : "black",
@@ -1274,6 +1371,7 @@
     },
     {
         "name": "Accessories SA2",
+        "type" : "accessories",
         "id" : "98",
         "brand" : "Senko",
         "color" : "black",
@@ -1287,6 +1385,7 @@
     },
     {
         "name": "Accessories SA3",
+        "type" : "accessories",
         "id" : "99",
         "brand" : "Senko",
         "color" : "black",
@@ -1300,6 +1399,7 @@
     },
     {
         "name": "Accessories SA4",
+        "type" : "accessories",
         "id" : "100",
         "brand" : "Senko",
         "color" : "black",
@@ -1313,7 +1413,8 @@
     },
     {
         "name": "Accessories SA5",
-        "id" : "SA5",
+        "type" : "accessories",
+        "id" : "101",
         "brand" : "Senko",
         "color" : "black",
         "price" : "174$",
@@ -1327,7 +1428,7 @@
 
     {
         "name": "Celling fan SHC1",
-        "id" : "SHC1",
+        "id" : "102",
         "brand" : "Sharp",
         "color" : "black",
         "price" : "204$",
@@ -1340,9 +1441,9 @@
     },
     {
         "name": "Celling fan SHC2",
-        "id" : "SHC2",
+        "id" : "103",
         "brand" : "Sharp",
-        "color" : "silver",
+        "color" : "yellow",
         "price" : "223$",
         "img" : "./img/Sharp/Ceiling/Cei2.jpeg",
         "category": "fans",
@@ -1366,7 +1467,7 @@
     },
     {
         "name": "Celling fan SHC4",
-        "id" : "SHC4",
+        "id" : "104",
         "brand" : "Sharp",
         "color" : "white",
         "price" : "264$",
@@ -1379,7 +1480,7 @@
     },
     {
         "name": "Celling fan SHC5",
-        "id" : "SHC5",
+        "id" : "105",
         "brand" : "Sharp",
         "color" : "blue",
         "price" : "274$",
@@ -1392,7 +1493,8 @@
     },
     {
         "name": "Pedestal fan SHP1",
-        "id" : "SHP1",
+        "type" : "pedestal",
+        "id" : "106",
         "brand" : "Sharp",
         "color" : "black",
         "price" : "284$",
@@ -1405,7 +1507,8 @@
     },
     {
         "name": "Pedestal fan SHP2",
-        "id" : "SHP2",
+        "type" : "pedestal",
+        "id" : "107",
         "brand" : "Sharp",
         "color" : "black",
         "price" : "210$",
@@ -1418,7 +1521,8 @@
     },
     {
         "name": "Pedestal fan SHP3",
-        "id" : "SHP3",
+        "type" : "pedestal",
+        "id" : "108",
         "brand" : "Sharp",
         "color" : "black",
         "price" : "224$",
@@ -1431,9 +1535,10 @@
     },
     {
         "name": "Pedestal fan SHP4",
-        "id" : "SHP4",
+        "type" : "pedestal",
+        "id" : "109",
         "brand" : "Sharp",
-        "color" : "gray",
+        "color" : "black",
         "price" : "294$",
         "img" : "./img/Sharp/Pedestal/Pe4.webp",
         "category": "fans",
@@ -1444,7 +1549,8 @@
     },
     {
         "name": "Pedestal fan SHP5",
-        "id" : "SHP5",
+        "type" : "pedestal",
+        "id" : "110",
         "brand" : "Sharp",
         "color" : "black",
         "price" : "254$",
@@ -1457,9 +1563,10 @@
     },
     {
         "name": "Wall fan SHW1",
-        "id" : "SHW1",
+        "type": "wall",
+        "id" : "111",
         "brand" : "Sharp",
-        "color" : "green",
+        "color" : "blue",
         "price" : "411$",
         "img" : "./img/Sharp/Wall/W1.jpeg",
         "category": "fans",
@@ -1470,7 +1577,8 @@
     },
     {
         "name": "Wall fan SHW2",
-        "id" : "SHW2",
+        "type": "wall",
+        "id" : "112",
         "brand" : "Sharp",
         "color" : "blue",
         "price" : "421$",
@@ -1483,7 +1591,8 @@
     },
     {
         "name": "Wall fan SHW3",
-        "id" : "SHW3",
+        "type": "wall",
+        "id" : "113",
         "brand" : "Sharp",
         "color" : "white",
         "price" : "431$",
@@ -1496,7 +1605,8 @@
     },
     {
         "name": "Wall fan SHW4",
-        "id" : "SHW4",
+        "type": "wall",
+        "id" : "114",
         "brand" : "Sharp",
         "color" : "black",
         "price" : "441$",
@@ -1509,9 +1619,10 @@
     },
     {
         "name": "Wall fan SHW5",
-        "id" : "SHW5",
+        "type": "wall",
+        "id" : "115",
         "brand" : "Sharp",
-        "color" : "green",
+        "color" : "blue",
         "price" : "451$",
         "img" : "./img/Sharp/Wall/W5.jpeg",
         "category": "fans",
@@ -1522,7 +1633,8 @@
     },
     {
         "name": "Accessories SHA1",
-        "id" : "SHA1",
+        "type" : "accessories",
+        "id" : "116",
         "brand" : "Sharp",
         "color" : "blue",
         "price" : "474$",
@@ -1535,7 +1647,8 @@
     },
     {
         "name": "Accessories SHA2",
-        "id" : "SHA2",
+        "type" : "accessories",
+        "id" : "117",
         "brand" : "Sharp",
         "color" : "black",
         "price" : "475$",
@@ -1548,7 +1661,8 @@
     },
     {
         "name": "Accessories SHA3",
-        "id" : "SHA3",
+        "type" : "accessories",
+        "id" : "118",
         "brand" : "Sharp",
         "color" : "white",
         "price" : "475$",
@@ -1561,7 +1675,8 @@
     },
     {
         "name": "Accessories SHA4",
-        "id" : "SHA4",
+        "type" : "accessories",
+        "id" : "119",
         "brand" : "Sharp",
         "color" : "white",
         "price" : "476$",
@@ -1574,9 +1689,10 @@
     },
     {
         "name": "Accessories SHA5",
-        "id" : "SHA5",
+        "type" : "accessories",
+        "id" : "110",
         "brand" : "Sharp",
-        "color" : "slight",
+        "color" : "yellow",
         "price" : "479$",
         "img" : "./img/Sharp/Accessories/A5.webp",
         "category": "accessories",

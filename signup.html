@@ -1,29 +1,44 @@
 <form onsubmit="signUp()" class="form" id="form-signup">
-    <h1 class="form-header">SIGN UP</h1>
-    <label>
-      <p class="label-txt">ENTER YOUR EMAIL</p>
-      <input type="text" class="input" id="email">
-      <span class="error"></span>
-      <div class="line-box">
-        <div class="line"></div>
-      </div>
-    </label>
-    <label>
-      <p class="label-txt">ENTER YOUR NAME</p>
-      <input type="text" class="input" id="username">
-      <span class="error"></span>
-      <div class="line-box">
-        <div class="line"></div>
-      </div>
-    </label>
-    <label>
-      <p class="label-txt">ENTER YOUR PASSWORD</p>
-      <input type="text" class="input" id="password">
-      <span class="error"></span>
-      <div class="line-box">
-        <div class="line"></div>
-      </div>
-    </label>
-    <button class="btn-confirm" name="submit" id="submit" type="submit">Submit</button>
-    <a href="#login" onclick="loadLogin()" id="signin-btn" class="btn-signin">Sign In</a>
-  </form>
+  <h1 class="form-header">SIGN UP</h1>
+  <label>
+    <p class="label-txt">ENTER YOUR EMAIL</p>
+    <input
+      type="text"
+      class="input"
+      required
+      id="email"
+    />
+    <div class="line-box">
+      <div class="line"></div>
+      <span class="error1"></span>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">ENTER YOUR NAME</p>
+    <input type="text" class="input" required id="username" />
+    <div class="line-box">
+      <div class="line"></div>
+      <span class="error2"></span>
+    </div>
+  </label>
+  <label>
+    <p class="label-txt">ENTER YOUR PASSWORD</p>
+    <input
+      type="password"
+      class="input"
+      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+      required
+      id="password"
+    />
+    <div class="line-box">
+      <div class="line"></div>
+      <span class="error3"></span>
+    </div>
+  </label>
+  <button class="btn-confirm" name="submit" id="submit" type="submit">
+    Submit
+  </button>
+  <a href="#login" onclick="loadLogin()" id="signin-btn" class="btn-signin"
+    >Sign In</a
+  >
+</form>

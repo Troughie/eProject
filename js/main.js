@@ -91,6 +91,9 @@ function loadBlog() {
 function loadLogin() {
   $("#main").load("signin.html")
 }
+function loadFaq() {
+  $("#main").load("faq.html")
+}
 
 
 	

@@ -15,7 +15,7 @@ Project title: Fanimation
 
 ============================
 
-eProject documentation at https://troughie.github.io/eProject/
+eProject documentation at https://github.com/Troughie/eProject/tree/main/documentation
 
 ============================
 

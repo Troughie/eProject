@@ -19,7 +19,7 @@ eProject documentation at https://troughie.github.io/eProject/
 
 ============================
 
-eProject published at https://huudai1559.github.io/eProject1/index.html
+eProject published at https://troughie.github.io/eProject/
 
 ============================
 

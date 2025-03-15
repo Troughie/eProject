@@ -34,12 +34,10 @@
   <body>
     <div class="container-fluid info">
       <div class="info__me">
-        <a class="info-link" href="mailto:nguyentienngoc7166@gmail.com"
-          ><i class="fa fa-envelope-o" aria-hidden="true"
-            >faniNTN@gmail.com</i
-          ></a
-        >
-        <span><i class="fa fa-phone" aria-hidden="true">00011020912</i></span>
+        <a class="info-link" href="mailto:nguyentienngoc7166@gmail.com">
+          faniNTN@gmail.com
+        </a>
+        <span><i class="fa fa-phone" aria-hidden="true"></i>00011020912</span>
       </div>
       <div class="info__client">
         <a class="info-link" href="#login" id="login">Login</a>
@@ -62,7 +60,9 @@
           data-bs-toggle="collapse"
           data-bs-target="#collapsibleNavbar"
         >
-          <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+          <span class="navbar-toggler-icon"
+            ><i class="fa-solid fa-bars"></i
+          ></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
@@ -88,15 +88,25 @@
                   <a class="dropdown-item" href="#about" id="about">About us</a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#contact" id="contact">Contact us</a>
+                  <a class="dropdown-item" href="#contact" id="contact"
+                    >Contact us</a
+                  >
                 </li>
                 <li><a class="dropdown-item" href="#faq" id="faq">FAQ</a></li>
-                <li><a class="dropdown-item" href="#blog" id="blog">Blog</a></li>
+                <li>
+                  <a class="dropdown-item" href="#blog" id="blog">Blog</a>
+                </li>
               </ul>
             </li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control ms-2" type="text" placeholder="Search" />
+          <form class="d-flex position-relative">
+            <input
+              id="search-item"
+              class="form-control ms-2"
+              type="text"
+              placeholder="Search"
+            />
+            <div id="item-list"></div>
             <button class="btn btn-primary" type="button">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
@@ -164,7 +174,7 @@
               <button>SUBSCRIBE</button>
             </div>
             <div class="jPerson">
-                <span></span>
+              <span></span>
             </div>
           </div>
         </div>
@@ -228,7 +238,6 @@
 
         document.getElementById("real-time").innerHTML = dateTime;
       }, 1000);
-      
     </script>
   </body>
 </html>

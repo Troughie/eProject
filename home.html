@@ -1,9 +1,10 @@
-<div class="wrapper"></div>
-<div class="banner">
-  <h1>
-    <span class="banner-text">We are Fanimation</span>
-    <p>efficiency and next-gen smart tech.</p>
-  </h1>
+<div class="wrapper">
+  <div class="banner">
+    <h1>
+      <span class="banner-text">We are Fanimation</span>
+      <p>efficiency and next-gen smart tech.</p>
+    </h1>
+  </div>
 </div>
 
 <div class="box">
@@ -84,48 +85,63 @@
   <h1>Discount</h1>
 </div>
 <div class="sale">
-  <div class="sale-box"><img src="./img/discount/Pic1.jpeg" alt="" class="sale-img"></div>
-  <div class="sale-box"><img src="./img/discount/Pic2.jpeg" alt="" class="sale-img"></div>
-  <div class="sale-box"><img src="./img/discount/Pic3.jpeg" alt="" class="sale-img"></div>
+  <div class="sale-box">
+    <img src="./img/discount/Pic1.jpeg" alt="" class="sale-img" />
+  </div>
+  <div class="sale-box">
+    <img src="./img/discount/Pic2.jpeg" alt="" class="sale-img" />
+  </div>
+  <div class="sale-box">
+    <img src="./img/discount/Pic3.jpeg" alt="" class="sale-img" />
+  </div>
 </div>
 
 <div class="popular">
   <div class="tittle">
     <h1>Popular</h1>
-    <a href="" class="seeAll" id="seeAll">See all</a>
+    <a onclick="goProduct()" class="seeAll scale-default" id="seeAll"
+      >See all</a
+    >
   </div>
   <div class="list-home" id="popular">
-    <div class="img">
+    <div class="img popular-type" data-type="wall">
       <div class="img-info">
-        <img src="./img/Hatari/Ceiling/3.jpeg" alt="" />
-        <p style="font-weight: 500; font-size: 20px;">
+        <img src="./img/Hatari/Ceiling/3.jpeg" alt="" class="scale-default" />
+        <p style="font-weight: 500; font-size: 20px">
           Wall fans <br />
           <br />
         </p>
       </div>
     </div>
-    <div class="img">
+    <div class="img popular-type" data-type="exhaust">
       <div class="img-info">
-        <img src="./img/Misubishi/Exhaust/E1.jpeg" alt="" />
-        <p style="font-weight: 500; font-size: 20px;">
+        <img
+          src="./img/Misubishi/Exhaust/E1.jpeg"
+          alt=""
+          class="scale-default"
+        />
+        <p style="font-weight: 500; font-size: 20px">
           Exhaust fans <br />
           <br />
         </p>
       </div>
     </div>
-    <div class="img">
+    <div class="img popular-type" data-type="ceiling">
       <div class="img-info">
-        <img src="./img/Hatari/Ceiling/Cei3.jpeg" alt="" />
-        <p style="font-weight: 500; font-size: 20px;">
-          Ceiling fans <br />
-          <br />
+        <img
+          src="./img/Hatari/Ceiling/Cei3.jpeg"
+          alt=""
+          class="scale-default"
+        />
+        <p style="font-weight: 500; font-size: 20px">
+          Ceiling fans <br /><br />
         </p>
       </div>
     </div>
-    <div class="img">
+    <div class="img popular-type" data-type="pedestal">
       <div class="img-info">
-        <img src="./img/Senko/Pedestal/5.webp" alt="" />
-        <p style="font-weight: 500; font-size: 20px;">
+        <img src="./img/Senko/Pedestal/5.webp" alt="" class="scale-default" />
+        <p style="font-weight: 500; font-size: 20px">
           Pedestal fans <br />
           <br />
         </p>
@@ -141,8 +157,9 @@
   <div class="list-home">
     <div class="img">
       <div class="img-info">
-        <div>
+        <div onclick="loadBlog()">
           <img
+            class="scale-default"
             width="480px"
             height="240px"
             src="./img/Hatari/Ceiling/Cei2.jpeg"
@@ -165,8 +182,9 @@
     </div>
     <div class="img">
       <div class="img-info">
-        <div>
+        <div onclick="loadBlog()">
           <img
+            class="scale-default"
             width="480px"
             height="240px"
             src="./img/Misubishi/Ceiling/4.png"
@@ -189,8 +207,9 @@
     </div>
     <div class="img">
       <div class="img-info">
-        <div>
+        <div onclick="loadBlog()">
           <img
+            class="scale-default"
             width="480px"
             height="240px"
             src="./img/Panasonic/Ceiling/4.png"
@@ -211,8 +230,9 @@
     </div>
     <div class="img">
       <div class="img-info">
-        <div>
+        <div onclick="loadBlog()">
           <img
+            class="scale-default"
             width="480px"
             height="240px"
             src="./img/Hatari/Ceiling/Cei5.jpeg"
